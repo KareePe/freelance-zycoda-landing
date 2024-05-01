@@ -2,8 +2,8 @@
   <slot />
 </template>
 
-<script>
-export default {};
+<script setup>
+
 </script>
 
 <style></style>
