@@ -1,4 +1,5 @@
 <template>
+    <LangSwicther />
   <slot />
 </template>
 
