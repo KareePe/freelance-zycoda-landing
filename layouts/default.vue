@@ -1,10 +1,8 @@
 <template>
-    <LangSwicther />
+  <NavBar />
   <slot />
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 
 <style></style>
