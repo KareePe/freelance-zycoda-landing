@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white w-full">
+  <div class="bg-[#fff]/60 backdrop-blur-md w-full relative z-[9999]">
     <div
       class="container mx-auto px-4 w-full h-[70px] flex justify-between items-center"
     >
@@ -7,7 +7,7 @@
         <img src="/images/logo/dark/logo-dark.svg" class="w-[150px]" alt=""
       /></NuxtLink>
 
-      <ul class="md:flex hidden gap-[15px]">
+      <ul class="md:flex hidden gap-[25px]">
         <li>
           <NuxtLink to="/" class="capitalize text-black">home</NuxtLink>
         </li>
@@ -30,6 +30,28 @@
       </div>
 
       <div class="md:flex hidden gap-[15px]">
+        <ul class="flex gap-2 items-center mr-4">
+          <li
+            :class="`w-[35px] h-[35px] flex justify-center items-center hover:text-blue hover:font-bold transition-all duration-300 cursor-pointer ${
+              locale === 'en'
+                ? 'bg-blue rounded-md text-[#fff] hover:bg-[#fff] hover:text-blue hover:font-bold'
+                : 'hover:text-blue hover:font-bold'
+            }`"
+            @click="fn_changeLang('en')"
+          >
+            EN
+          </li>
+          <li
+            :class="`w-[35px] h-[35px] flex justify-center items-center transition-all duration-300 cursor-pointer ${
+              locale === 'th'
+                ? 'bg-blue rounded-md text-[#fff] hover:bg-[#fff] hover:text-blue hover:font-bold'
+                : 'hover:text-blue hover:font-bold'
+            }`"
+            @click="fn_changeLang('th')"
+          >
+            TH
+          </li>
+        </ul>
         <NuxtLink
           to="/contact-us"
           class="capitalize block px-8 py-2 bg-[#BF2C7B] text-white-light rounded-full shadow-lg"
@@ -45,7 +67,7 @@
   ></div>
   <div
     id="navMb"
-    class="fixed bg-[#f5f5f5]/30 backdrop-blur-md mt-[70px] p-4 max-w-[100%] w-full h-full translate-x-[100%] top-[0] right-[0] transition-transform duration-300 z-[9999]"
+    class="fixed bg-[#f5f5f5]/80 backdrop-blur-sm mt-[70px] p-4 max-w-[100%] w-full h-full translate-x-[100%] top-[0] right-[0] transition-transform duration-300 z-[9999]"
   >
     <div
       class="hidden items-center justify-end w-full cursor-pointer bar-close mb-[25px]"
@@ -69,10 +91,32 @@
       </li>
     </ul>
 
-    <div class="md:hidden flex gap-[15px]">
+    <div class="md:hidden block gap-[15px]">
+      <ul class="flex gap-2 items-center mt-[20px]">
+          <li
+            :class="`w-[50%] h-[35px] flex justify-center items-center hover:text-blue hover:font-bold transition-all duration-300 cursor-pointer ${
+              locale === 'en'
+                ? 'bg-blue rounded-md text-[#fff] hover:bg-[#fff] hover:text-blue hover:font-bold'
+                : 'hover:text-blue hover:font-bold'
+            }`"
+            @click="fn_changeLang('en')"
+          >
+            EN
+          </li>
+          <li
+            :class="`w-[50%] h-[35px] flex justify-center items-center transition-all duration-300 cursor-pointer ${
+              locale === 'th'
+                ? 'bg-blue rounded-md text-[#fff] hover:bg-[#fff] hover:text-blue hover:font-bold'
+                : 'hover:text-blue hover:font-bold'
+            }`"
+            @click="fn_changeLang('th')"
+          >
+            TH
+          </li>
+        </ul>
       <NuxtLink
         to="/contact-us"
-        class="capitalize block mt-[25px] w-full text-center px-8 py-2 bg-pink !text-white rounded-full shadow-lg"
+        class="capitalize block mt-[25px] w-full text-center px-8 py-2 bg-pink !text-[#fff] rounded-full shadow-lg"
         >contact us</NuxtLink
       >
     </div>
@@ -84,6 +128,11 @@ import { ref } from "vue";
 import VueFeather from "vue-feather";
 
 const localPath = useLocalePath();
+const { locales, locale, setLocale } = useI18n();
+
+const fn_changeLang = (lang) => {
+  setLocale(lang);
+};
 
 const fn_toggleClassOpen = () => {
   const hamburger = document.querySelector("#nav-icon4");

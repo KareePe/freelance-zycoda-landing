@@ -8,3 +8,9 @@ html {
 body {
     font-family: "Raleway",'IBM Plex Sans Thai', sans-serif;
 }
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    /* bottom: 50px !important;
+    text-align: left !important;
+    left: 50px !important; */
+}
