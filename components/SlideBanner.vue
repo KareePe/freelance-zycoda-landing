@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-[520px] mt-[70px]">
+  <div class="w-full md:h-[520px] h-[650px] mt-[70px]">
     <swiper
       :spaceBetween="30"
       :centeredSlides="true"
@@ -17,11 +17,11 @@
     >
       <swiper-slide v-for="(slide, slideIndex) in slideData" :key="slideIndex">
         <div
-          class="w-full h-[520px]"
+          class="w-full md:h-[520px] h-[650px]"
           :style="`background:url(/images/${slide.img});background-size:cover;background-position:center;`"
         >
           <div
-            class="absolute z-1 right-0 w-full h-[520px] bg-white"
+            class="absolute z-1 right-0 w-full md:h-[520px] h-[650px] bg-white"
             style="
               background: linear-gradient(
                 39deg,
@@ -32,7 +32,7 @@
           ></div>
 
           <div
-            class="h-[520px] lg:max-w-[65%] max-w-full flex items-center px-10"
+            class="md:h-[520px] h-[650px] lg:max-w-[65%] max-w-full flex items-center px-10"
           >
             <div class="lg:text-left text-center">
               <h1

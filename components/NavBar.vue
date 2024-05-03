@@ -164,7 +164,7 @@ const fn_toggleDrawer = () => {
 
 onMounted(() => {
   window.addEventListener("scroll",() => {
-    console.log(window.scrollY)
+    // console.log(window.scrollY)
     const topNav = document.querySelector('.top-nav')
     const innerNav = document.querySelector('.inner-nav')
     const logo = document.querySelector('.logo')

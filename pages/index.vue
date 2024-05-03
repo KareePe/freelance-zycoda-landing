@@ -1,8 +1,8 @@
 <template>
   <SlideBanner />
-  <section class="w-full py-24">
+  <section class="w-full pt-24">
     <div class="container mx-auto p-4">
-      <h2 class="sm:text-[55px] text-[45px] font-bold capitalize text-black">
+      <h2 class="sm:text-[55px] text-[35px] font-bold capitalize text-black">
         our products
       </h2>
       <p>{{ $t("description_product_index") }}</p>
@@ -111,6 +111,17 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="w-full pt-24 bg-black">
+    <div class="container mx-auto p-4">
+      <h2
+        class="sm:text-[55px] text-[35px] font-bold capitalize text-white-light text-center"
+      >
+        "Discover why countless industries and engineers confidently choose our
+        trusted solutions."
+      </h2>
     </div>
   </section>
 </template>
