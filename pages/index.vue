@@ -123,9 +123,174 @@
         trusted solutions."
       </h2>
     </div>
+
+    <div class="mt-[50px]">
+      <swiper
+        :slidesPerView="1"
+        :spaceBetween="0"
+        :centeredSlides="false"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="false"
+        :breakpoints="{
+          '480': {
+            slidesPerView: 1,
+          },
+          '640': {
+            slidesPerView: 2,
+          },
+          '768': {
+            slidesPerView: 2,
+          },
+          '1024': {
+            slidesPerView: 4,
+          },
+        }"
+        :modules="modules"
+        class="mySwiper"
+      >
+        <swiper-slide>
+          <div class="group relative cursor-pointer">
+            <div
+              class="bg-black/45 w-full h-full absolute top-0 left-0 group-hover:bg-black/0 transition-all duration-300"
+            ></div>
+            <img src="/images/employees/code.png" class="w-full" />
+
+            <div class="absolute z-[9] top-0 my-4 mx-4">
+              <p
+                class="text-[14px] text-[#fff] group-hover:text-pink transition-all duration-300"
+              >
+                Chinaphan Sukakarnpadoong
+              </p>
+              <h3
+                class="font-bold text-[#fff] group-hover:text-blue transition-all duration-300"
+              >
+                {{ $t("emp_1") }}
+              </h3>
+            </div>
+
+            <div
+              class="text-[#fff] absolute z-[9] bottom-0 py-4 px-4 text-[14px]"
+            >
+              <p>Operation Excellence and Industry 4.0 Director</p>
+              <p>SCG Cement Building Materials</p>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="group relative cursor-pointer">
+            <div
+              class="bg-black/45 w-full h-full absolute top-0 left-0 group-hover:bg-black/0 transition-all duration-300"
+            ></div>
+            <img src="/images/employees/code.png" class="w-full" />
+
+            <div class="absolute z-[9] top-0 my-4 mx-4">
+              <p
+                class="text-[14px] text-[#fff] group-hover:text-pink transition-all duration-300"
+              >
+                Niwit Khruesarn
+              </p>
+              <h3
+                class="font-bold text-[#fff] group-hover:text-blue transition-all duration-300"
+              >
+                {{ $t("emp_2") }}
+              </h3>
+            </div>
+
+            <div
+              class="text-[#fff] absolute z-[9] bottom-0 py-4 px-4 text-[14px]"
+            >
+              <p>Maintenance & Engineering Manager</p>
+              <p>Government Pharmaceutical Organization (GPO)</p>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="group relative cursor-pointer">
+            <div
+              class="bg-black/45 w-full h-full absolute top-0 left-0 group-hover:bg-black/0 transition-all duration-300"
+            ></div>
+            <img src="/images/employees/code.png" class="w-full" />
+
+            <div class="absolute z-[9] top-0 my-4 mx-4">
+              <p
+                class="text-[14px] text-[#fff] group-hover:text-pink transition-all duration-300"
+              >
+                Soontorn Sri-on
+              </p>
+              <h3
+                class="font-bold text-[#fff] group-hover:text-blue transition-all duration-300"
+              >
+                {{ $t("emp_3") }}
+              </h3>
+            </div>
+
+            <div
+              class="text-[#fff] absolute z-[9] bottom-0 py-4 px-4 text-[14px]"
+            >
+              <p>Systematic Preventive Maintenance Specialist</p>
+              <p>SCG Cement Building Materials</p>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="group relative cursor-pointer">
+            <div
+              class="bg-black/45 w-full h-full absolute top-0 left-0 group-hover:bg-black/0 transition-all duration-300"
+            ></div>
+            <img src="/images/employees/code.png" class="w-full" />
+
+            <div class="absolute z-[9] top-0 my-4 mx-4">
+              <p
+                class="text-[14px] text-[#fff] group-hover:text-pink transition-all duration-300"
+              >
+                Weerapong Chootong
+              </p>
+              <h3
+                class="font-bold text-[#fff] group-hover:text-blue transition-all duration-300"
+              >
+                {{ $t("emp_4") }}
+              </h3>
+            </div>
+
+            <div
+              class="text-[#fff] absolute z-[9] bottom-0 py-4 px-4 text-[14px]"
+            >
+              <p>Energy Control SectionManager</p>
+              <p>Bangkok Solar Power</p>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper>
+    </div>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref, onMounted } from "vue";
+
+import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/effect-fade";
+
+const onSwiper = (swiper) => {
+  return swiper;
+};
+
+const onSlideChange = () => {};
+
+const modules = [Navigation, Pagination, Autoplay, EffectFade];
+</script>
 
 <style></style>
