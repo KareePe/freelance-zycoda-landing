@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-[520px]">
+  <div class="w-full h-[520px] mt-[70px]">
     <swiper
       :spaceBetween="30"
       :centeredSlides="true"
@@ -82,7 +82,7 @@ let slideData = [
       "ZYCODA aims to advance Thailand industry by implementing AI through the mechanical maintenance management system",
     desc_th:
       "ZYCODA เรามุ่งมั่นที่จะยกระดับอุตสาหกรรมไทยด้วยการใช้เทคโนโลยี AI ในระบบงานซ่อมบำรุง",
-    img: "low-angle.png",
+    img: "robot-1.png",
   },
   {
     topic_en: "Comprehensive maintenance system with AI supports",
@@ -91,7 +91,7 @@ let slideData = [
       "The comprehensive ZYCODA's system can monitor different work areas including work-order, human-resource, and spare-part changes. Furthermore, it can accurately predict mechanical abnormality by using recorded data and AI in order to adjust maintenance plans and  nurtures.",
     desc_th:
       "ZYCODA  ช่วยดูแลเครื่องจักรแบบครบวงจร ทั้งการจัดงานงาน จัดการคน และการเปลี่ยนอะไหล่ตามคาบเวลา รวมถึงพยากรณ์ความผิดปกติของเครื่องจักร โดยใช้ข้อมูลในอดีต และ เทคโนโลยี AI เข้ามาช่วยในการกำหนดแผนและวิธีการดูแลรักษาเครื่องจักรอย่างเหมาะสม",
-    img: "sofa.jpg",
+    img: "representation-user-experience-interface-design.png",
   },
   {
     topic_en: "ZYCODA's system will notify before machines break down",
@@ -100,7 +100,7 @@ let slideData = [
       "Machine fault detection by AI. The systems will accurately notify users ahead to prevent problems and reduce breakdown risks",
     desc_th:
       "ระบบตรวจจับความผิดปกติของเครื่องจักรด้วยเทคโนโลยี AI ป้องกันปัญหา ลดความเสียหายที่ต่อกระบวนการผลิต ด้วยการแจ้งเตือนล่วงหน้าที่มีความแม่นยำสูง",
-    img: "stylish.jpg",
+    img: "woman-is-looking-computer-screen-that-has-design-it.jpeg",
   },
   {
     topic_en:
@@ -111,7 +111,7 @@ let slideData = [
       "Zycoda's system will bring implement machine data to do machine learning through AI. By doing this, potential damages and suggested solutions will be provided to better existing the maintenance plan.",
     desc_th:
       "ระบบสามารถดึงข้อมูลจากเครื่องจักรเข้ามาเพื่อให้ AI เรียนรู้ คาดการณ์ความเสียหายของเครื่องจักรที่อาจจะเกิดขึ้นได้ล่วงหน้า พร้อมทั้งแนะนําวิธีการแก้ไขปัญหาได้อย่างแม่นยํา ทําให้สามารถวางแผนงานซ่อมบํารุงได้อย่างมีประสิทธิภาพ",
-    img: "stylish.jpg",
+    img: "engineer-technician-working-with-robot-arm-factory-industry-engineering-concept.jpeg",
   },
   {
     topic_en: "Website-based system, No program installation needed",
@@ -119,7 +119,7 @@ let slideData = [
     desc_en: "All users can use through smartphones from anywhere and anytime.",
     desc_th:
       "ZYCODA ออกแบบให้ใช้งานง่าย ใช้ได้ทุกที่ทุกเวลา ในทุกระบบ ผ่าน smartphone ของท่าน",
-    img: "stylish.jpg",
+    img: "asian-female.png",
   },
 ];
 
