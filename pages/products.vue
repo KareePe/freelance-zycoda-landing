@@ -153,8 +153,15 @@
   </section>
 </template>
 
-<script>
-export default {};
+<script setup>
+useSeoMeta({
+  title: 'ZYCODA Product Working Flow',
+  ogTitle: 'ZYCODA Product Working Flow',
+  description: 'ZYCODA CMMS Software Sensor Monitoring Software Predictive Analytics Platform & Real-Time AI Monitoring',
+  ogDescription: 'ZYCODA CMMS Software Sensor Monitoring Software Predictive Analytics Platform & Real-Time AI Monitoring',
+  ogImage: '/images/products/Z-Connect.png',
+  twitterCard: 'summary_large_image',
+})
 </script>
 
 <style></style>

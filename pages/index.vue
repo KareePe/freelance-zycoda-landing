@@ -576,6 +576,15 @@ const onSwiper = (swiper) => {
 const onSlideChange = () => {};
 
 const modules = [Navigation, Pagination, Autoplay, EffectFade];
+
+useSeoMeta({
+  title: 'ZYCODA',
+  ogTitle: 'ZYCODA',
+  description: 'ZYCODA aims to advance Thailand industry by implementing AI through the mechanical maintenance management system',
+  ogDescription: 'ZYCODA aims to advance Thailand industry by implementing AI through the mechanical maintenance management system',
+  ogImage: '/images/logo/dark/logo-dark.png',
+  twitterCard: 'summary_large_image',
+})
 </script>
 
 <style>
