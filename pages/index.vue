@@ -1,6 +1,6 @@
 <template>
   <SlideBanner />
-  <section class="w-full pt-24 bg-white-light">
+  <section class="product w-full pt-24 bg-white-light">
     <div class="container mx-auto p-4">
       <h2 class="sm:text-[55px] text-[35px] font-bold capitalize text-black">
         our products
@@ -114,7 +114,7 @@
     </div>
   </section>
 
-  <section class="w-full pt-24 bg-black">
+  <section class="testimonial w-full pt-24 bg-black">
     <div class="container mx-auto p-4">
       <h2
         class="sm:text-[55px] text-[35px] font-bold capitalize text-white-light text-center"
@@ -270,7 +270,7 @@
     </div>
   </section>
 
-  <section class="bg-white-light py-[100px]">
+  <section class="blog bg-white-light py-[100px]">
     <div class="container mx-auto p-4">
       <h2 class="sm:text-[55px] text-[35px] font-bold capitalize text-black">
         {{ $t("blog") }}

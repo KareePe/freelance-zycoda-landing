@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full md:h-[520px] h-[650px] mt-[70px]">
+  <section class="banner w-full md:h-[520px] h-[650px] mt-[70px]">
     <swiper
       :spaceBetween="30"
       :centeredSlides="true"
@@ -56,7 +56,7 @@
         </div>
       </template>
     </swiper>
-  </div>
+  </section>
 </template>
 
 <script setup>
