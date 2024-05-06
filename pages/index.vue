@@ -451,7 +451,7 @@
     </div>
   </section>
 
-  <section class="bg-white-light pb-[100px]">
+  <section class="past-activities bg-white-light pb-[100px]">
     <div class="container mx-auto p-4">
       <h2
         class="sm:text-[55px] text-center text-[35px] font-bold capitalize text-black"
