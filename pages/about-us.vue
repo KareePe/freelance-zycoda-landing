@@ -79,10 +79,10 @@
             class="w-[150px] ml-[50%] -translate-x-[50%]"
             alt=""
           />
-          <a
-            href="/contact-us"
+          <NuxtLink
+            to="/contact-us"
             class="capitalize block mt-[15px] w-[fit-content] ml-[50%] -translate-x-[50%] px-8 py-2 bg-[#BF2C7B] text-white-light rounded-full shadow-lg"
-            >contact us</a
+            >contact us</NuxtLink
           >
         </div>
       </div>

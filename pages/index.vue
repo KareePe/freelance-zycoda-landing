@@ -34,7 +34,7 @@
 
               <NuxtLink
                 to="/contact-us"
-                class="text-[#fff] capitalize tetx-center bg-pink hover:bg-blue transition-colors duration-300 px-8 py-2 rounded-full shadow-lg mt-[15px]"
+                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 px-8 py-2 rounded-full shadow-lg mt-[15px]"
                 >free trial</NuxtLink
               >
             </div>
@@ -69,7 +69,7 @@
 
               <NuxtLink
                 to="/contact-us"
-                class="text-[#fff] capitalize tetx-center bg-pink hover:bg-blue transition-colors duration-300 px-8 py-2 rounded-full shadow-lg mt-[15px]"
+                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 px-8 py-2 rounded-full shadow-lg mt-[15px]"
                 >free trial</NuxtLink
               >
             </div>
