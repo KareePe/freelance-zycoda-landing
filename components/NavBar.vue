@@ -171,10 +171,12 @@ onMounted(() => {
     if(window.scrollY >= 350) {
       topNav.classList.add('backdrop-blur-md')
       topNav.classList.add('!bg-[#fff]/60')
+      topNav.classList.add('!shadow-lg')
       innerNav.classList.add('!h-[55px]')
     }else if(window.scrollY <= 70){
       topNav.classList.remove('backdrop-blur-md')
       topNav.classList.remove('!bg-[#fff]/60')
+      topNav.classList.remove('!shadow-lg')
       innerNav.classList.remove('!h-[55px]')
     }
   })

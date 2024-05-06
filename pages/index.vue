@@ -1,6 +1,6 @@
 <template>
   <SlideBanner />
-  <section class="w-full pt-24">
+  <section class="w-full pt-24 bg-white-light">
     <div class="container mx-auto p-4">
       <h2 class="sm:text-[55px] text-[35px] font-bold capitalize text-black">
         our products
@@ -269,10 +269,279 @@
       </swiper>
     </div>
   </section>
+
+  <section class="bg-white-light py-[100px]">
+    <div class="container mx-auto p-4">
+      <h2 class="sm:text-[55px] text-[35px] font-bold capitalize text-black">
+        {{ $t("blog") }}
+      </h2>
+      <p>{{ $t("description_blog_index") }}</p>
+
+      <div class="my-[50px] flex flex-wrap -px-[15]">
+        <div class="md:basis-8/12 basis-full relative px-2">
+          <div
+            class="rounded-lg shadow-lg h-[400px] relative"
+            style="
+              background: url(/images/cloud-system.png);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div
+              class="bg-gradient-to-t from-blue to-transparent w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
+            ></div>
+            <div
+              class="h-[fit-content] w-full absolute bottom-0 p-4 z-[9] flex justify-between items-center bg-[#2A282F]/50 backdrop-blur-lg rounded-b-lg"
+            >
+              <div class="max-w-[75%]">
+                <h3 class="font-bold text-[#fff] text-[20px] line-clamp-2">
+                  Hackathon & Pitching E-SARN Thailand PMU-B Coding & AI Academy
+                </h3>
+              </div>
+
+              <NuxtLink
+                to="/contact-us"
+                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
+              >
+                <vue-feather
+                  type="chevron-right"
+                  class="ml-[50%] mt-[50%] -translate-x-[50%] -translate-y-[50%]"
+                ></vue-feather>
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:basis-4/12 basis-full relative px-2">
+          <div
+            class="rounded-lg shadow-lg h-[400px] relative"
+            style="
+              background: url(/images/cloud-system.png);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div
+              class="bg-gradient-to-t from-blue to-transparent w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
+            ></div>
+            <div
+              class="h-[fit-content] w-full absolute bottom-0 p-4 z-[9] flex justify-between items-center bg-[#2A282F]/50 backdrop-blur-lg rounded-b-lg"
+            >
+              <div class="max-w-[75%]">
+                <h3 class="font-bold text-[#fff] text-[20px] line-clamp-2">
+                  Hackathon & Pitching E-SARN Thailand PMU-B Coding & AI Academy
+                </h3>
+              </div>
+
+              <NuxtLink
+                to="/contact-us"
+                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
+              >
+                <vue-feather
+                  type="chevron-right"
+                  class="ml-[50%] mt-[50%] -translate-x-[50%] -translate-y-[50%]"
+                ></vue-feather>
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:basis-4/12 basis-full relative px-2 py-4">
+          <div
+            class="rounded-lg shadow-lg h-[400px] relative"
+            style="
+              background: url(/images/cloud-system.png);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div
+              class="bg-gradient-to-t from-blue to-transparent w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
+            ></div>
+            <div
+              class="h-[fit-content] w-full absolute bottom-0 p-4 z-[9] flex justify-between items-center bg-[#2A282F]/50 backdrop-blur-lg rounded-b-lg"
+            >
+              <div class="max-w-[75%]">
+                <h3 class="font-bold text-[#fff] text-[20px] line-clamp-2">
+                  Hackathon & Pitching E-SARN Thailand PMU-B Coding & AI Academy
+                </h3>
+              </div>
+
+              <NuxtLink
+                to="/contact-us"
+                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
+              >
+                <vue-feather
+                  type="chevron-right"
+                  class="ml-[50%] mt-[50%] -translate-x-[50%] -translate-y-[50%]"
+                ></vue-feather>
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:basis-4/12 basis-full relative px-2 py-4">
+          <div
+            class="rounded-lg shadow-lg h-[400px] relative"
+            style="
+              background: url(/images/cloud-system.png);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div
+              class="bg-gradient-to-t from-blue to-transparent w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
+            ></div>
+            <div
+              class="h-[fit-content] w-full absolute bottom-0 p-4 z-[9] flex justify-between items-center bg-[#2A282F]/50 backdrop-blur-lg rounded-b-lg"
+            >
+              <div class="max-w-[75%]">
+                <h3 class="font-bold text-[#fff] text-[20px] line-clamp-2">
+                  Hackathon & Pitching E-SARN Thailand PMU-B Coding & AI Academy
+                </h3>
+              </div>
+
+              <NuxtLink
+                to="/contact-us"
+                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
+              >
+                <vue-feather
+                  type="chevron-right"
+                  class="ml-[50%] mt-[50%] -translate-x-[50%] -translate-y-[50%]"
+                ></vue-feather>
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:basis-4/12 basis-full relative px-2 py-4">
+          <div
+            class="rounded-lg shadow-lg h-[400px] relative"
+            style="
+              background: url(/images/cloud-system.png);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div
+              class="bg-gradient-to-t from-blue to-transparent w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
+            ></div>
+            <div
+              class="h-[fit-content] w-full absolute bottom-0 p-4 z-[9] flex justify-between items-center bg-[#2A282F]/50 backdrop-blur-lg rounded-b-lg"
+            >
+              <div class="max-w-[75%]">
+                <h3 class="font-bold text-[#fff] text-[20px] line-clamp-2">
+                  Hackathon & Pitching E-SARN Thailand PMU-B Coding & AI Academy
+                </h3>
+              </div>
+
+              <NuxtLink
+                to="/contact-us"
+                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
+              >
+                <vue-feather
+                  type="chevron-right"
+                  class="ml-[50%] mt-[50%] -translate-x-[50%] -translate-y-[50%]"
+                ></vue-feather>
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white-light pb-[100px]">
+    <div class="container mx-auto p-4">
+      <h2
+        class="sm:text-[55px] text-center text-[35px] font-bold capitalize text-black"
+      >
+        Past-Activities
+      </h2>
+
+      <lightgallery
+        :settings="{
+          speed: 500,
+          plugins: plugins,
+          lastRow: false,
+          rowHeight: 180,
+          margins: 5,
+        }"
+        :onInit="onInit"
+        :onBeforeSlide="onBeforeSlide"
+        class="mt-[50px]"
+      >
+        <a href="/images/activities/PastActivity_Automation2024_1.jpg">
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Automation2024_1.jpg"
+          />
+        </a>
+        <a href="/images/activities/PastActivity_Automation2024_2.jpg">
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Automation2024_2.jpg"
+          />
+        </a>
+        <a href="/images/activities/PastActivity_Automation2024_3.jpg">
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Automation2024_3.jpg"
+          />
+        </a>
+        <a href="/images/activities/PastActivity_SM2023_1.jpg">
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_SM2023_1.jpg"
+          />
+        </a>
+        <a href="/images/activities/PastActivity_Techsauce2023_1.jpg">
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Techsauce2023_1.jpg"
+          />
+        </a>
+        <a href="/images/activities/PastActivity_Techsauce2023_2.jpg">
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Techsauce2023_2.jpg"
+          />
+        </a>
+        <a href="/images/activities/PastActivity_Techsauce2023_3.jpg">
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Techsauce2023_3.jpg"
+          />
+        </a>
+        <a href="/images/activities/PastActivity_YT2024_1.jpg">
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_YT2024_1.jpg"
+          />
+        </a>
+        <a href="/images/activities/PastActivity_YT2024_2.jpg">
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_YT2024_2.jpg"
+          />
+        </a>
+      </lightgallery>
+    </div>
+  </section>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
+import VueFeather from "vue-feather";
 
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 
@@ -284,6 +553,22 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
 
+import Lightgallery from "lightgallery/vue";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
+
+// If you are using scss you can skip the css imports below and use scss instead
+// import styles from "lightgallery/scss/lightgallery.scss";
+
+const plugins = [lgThumbnail, lgZoom];
+
+const onInit = () => {
+  console.log("lightGallery has been initialized");
+};
+const onBeforeSlide = () => {
+  console.log("calling before slide");
+};
+
 const onSwiper = (swiper) => {
   return swiper;
 };
@@ -293,4 +578,42 @@ const onSlideChange = () => {};
 const modules = [Navigation, Pagination, Autoplay, EffectFade];
 </script>
 
-<style></style>
+<style>
+@import "lightgallery/css/lightgallery.css";
+@import "lightgallery/css/lg-thumbnail.css";
+@import "lightgallery/css/lg-zoom.css";
+
+#lg-container-1 {
+  position: relative;
+  z-index: 99999;
+}
+
+.lightgallery-vue {
+  column-count: 4;
+  column-gap: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .lightgallery-vue {
+    column-count: 2;
+  }
+}
+
+/* .lightgallery-vue a > img {
+  max-width: 100%;
+  display: block;
+} */
+
+.lightgallery-vue a {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+.lightgallery-vue a > img {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+</style>
