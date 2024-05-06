@@ -9,7 +9,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@nuxtjs/i18n"],
+  modules: ["@nuxtjs/i18n",'@vueform/nuxt'],
   i18n: {
     strategy: "no_prefix",
     locales: [

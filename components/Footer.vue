@@ -1,5 +1,7 @@
 <template>
-  <footer class="bg-[url(/images/bg-footer.jpg)] bg-cover bg-left border-b-[15px] border-blue">
+  <footer
+    class="bg-[url(/images/bg-footer.jpg)] bg-cover bg-left border-b-[15px] border-blue"
+  >
     <div class="container mx-auto p-4">
       <div class="flex flex-wrap justify-between items-center py-16">
         <div>
@@ -13,7 +15,7 @@
             บางซื่อ กรุงเทพมหานคร 10800</a
           >
         </div>
-        <div>
+        <div class="min-h-[204px]">
           <p class="text-[20px] font-bold capitalize text-black">Contact</p>
 
           <ul class="mt-[15px] p-0">
@@ -79,7 +81,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="min-h-[204px]">
           <p class="text-[20px] font-bold capitalize text-black">Enquires</p>
 
           <ul class="mt-[15px] p-0">
@@ -106,8 +108,21 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="min-h-[204px]">
           <p class="text-[20px] font-bold capitalize text-black">Search</p>
+          <Vueform
+            class="mt-[15px]"
+            :endpoint="false"
+            ref="form$"
+            @change="handleChange"
+          >
+            <TextElement
+              name="first_name"
+              placeholder="ค้นหา"
+              field-name="First name"
+              :loading="loading"
+            />
+          </Vueform>
         </div>
       </div>
     </div>
@@ -115,7 +130,18 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
 import VueFeather from "vue-feather";
+
+const form$ = ref(null);
+let loading = ref(false);
+
+const handleChange = () => {
+  setTimeout(() => {
+    loading.value = form$.value.data.first_name !== '' ? true : false;
+    console.log(form$.value.data.first_name);
+  }, 2000);
+};
 </script>
 
 <style></style>

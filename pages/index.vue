@@ -316,7 +316,7 @@
           <div
             class="rounded-lg shadow-lg h-[400px] relative"
             style="
-              background: url(/images/cloud-system.png);
+              background: url(/images/engineer-technician-working-with-robot-arm-factory-industry-engineering-concept.jpeg);
               background-size: cover;
               background-position: center;
             "
@@ -350,7 +350,7 @@
           <div
             class="rounded-lg shadow-lg h-[400px] relative"
             style="
-              background: url(/images/cloud-system.png);
+              background: url(/images/representation-user-experience-interface-design.png);
               background-size: cover;
               background-position: center;
             "
@@ -384,7 +384,7 @@
           <div
             class="rounded-lg shadow-lg h-[400px] relative"
             style="
-              background: url(/images/cloud-system.png);
+              background: url(/images/stylish.jpg);
               background-size: cover;
               background-position: center;
             "
@@ -418,7 +418,7 @@
           <div
             class="rounded-lg shadow-lg h-[400px] relative"
             style="
-              background: url(/images/cloud-system.png);
+              background: url(/images/business-analytics.png);
               background-size: cover;
               background-position: center;
             "
