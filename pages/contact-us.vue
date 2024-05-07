@@ -155,7 +155,8 @@
 
             <div>
               <a
-                href="javascript:void(0)"
+                href="https://www.facebook.com/zycoda.saas"
+                target="_blank"
                 class="underline text-[16px] text-black"
                 >Zycoda</a
               >
@@ -178,7 +179,9 @@
           class="w-[350px] mt-[100px] ml-[50%] -translate-x-[50%]"
           alt=""
         />
-        <p class="font-bold text-[25px] text-center mt-4">“everyone can build AI”</p>
+        <p class="font-bold text-[25px] text-center mt-4">
+          “everyone can build AI”
+        </p>
       </div>
     </div>
   </section>

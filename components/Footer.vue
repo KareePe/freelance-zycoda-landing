@@ -73,7 +73,8 @@
 
               <div>
                 <a
-                  href="javascript:void(0)"
+                  href="https://www.facebook.com/zycoda.saas"
+                  target="_blank"
                   class="underline text-[16px] text-black"
                   >Zycoda</a
                 >
