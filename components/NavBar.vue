@@ -54,7 +54,7 @@
         </ul>
         <NuxtLink
           to="/contact-us"
-          class="capitalize block px-8 py-2 bg-[#BF2C7B] text-white-light rounded-full shadow-lg"
+          class="capitalize block px-8 py-2 bg-[#BF2C7B] !text-white-light rounded-full shadow-lg"
           >contact us</NuxtLink
         >
       </div>
