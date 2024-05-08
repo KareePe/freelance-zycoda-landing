@@ -10,7 +10,7 @@
             class="w-[150px] ml-[50%] -translate-x-[50%]"
             alt=""
           />
-          <p class="text-black mt-[15px]">{{ $t("zycoda_about") }}</p>
+          <div v-html="locale === 'en' ? zycoda_about_eng : zycoda_about_th" class="text-black mt-[15px]"></div>
         </div>
       </div>
       <div
@@ -198,8 +198,13 @@ import Lightgallery from "lightgallery/vue";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 
-// If you are using scss you can skip the css imports below and use scss instead
-// import styles from "lightgallery/scss/lightgallery.scss";
+const { locale } = useI18n();
+
+const zycoda_about_eng =
+  "AI solution for mechanical maintenance management system to increase <br> machine performance efficiency and reduce costs of production";
+
+  const zycoda_about_th =
+  "AI solution สำหรับการบริหารจัดการงานซ่อมบำรุงที่ช่วยเพิ่มประสิทธิภาพการใช้งานของเครื่องจักรและช่วยลดต้นทุนในกระบวนการผลิต";
 
 const plugins = [lgThumbnail, lgZoom];
 
@@ -215,38 +220,4 @@ const onBeforeSlide = () => {
 @import "lightgallery/css/lightgallery.css";
 @import "lightgallery/css/lg-thumbnail.css";
 @import "lightgallery/css/lg-zoom.css";
-
-#lg-container-1 {
-  position: relative;
-  z-index: 99999;
-}
-
-.lightgallery-vue {
-  column-count: 4;
-  column-gap: 10px;
-}
-
-@media screen and (max-width: 991px) {
-  .lightgallery-vue {
-    column-count: 2;
-  }
-}
-
-/* .lightgallery-vue a > img {
-  max-width: 100%;
-  display: block;
-} */
-
-.lightgallery-vue a {
-  margin: 0;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  margin-bottom: 10px;
-  break-inside: avoid;
-}
-
-.lightgallery-vue a > img {
-  grid-row: 1 / -1;
-  grid-column: 1;
-}
 </style>

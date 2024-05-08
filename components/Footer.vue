@@ -119,7 +119,7 @@
           >
             <TextElement
               name="first_name"
-              placeholder="ค้นหา"
+              :placeholder="$t('search')"
               field-name="First name"
               :loading="loading"
             />

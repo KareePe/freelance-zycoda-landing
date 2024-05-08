@@ -9,16 +9,16 @@
 
       <ul class="md:flex hidden gap-[25px]">
         <li>
-          <NuxtLink to="/" class="capitalize text-black">home</NuxtLink>
+          <NuxtLink to="/" class="capitalize text-black">{{$t('menu_home')}}</NuxtLink>
         </li>
         <li>
           <NuxtLink to="/about-us" class="capitalize text-black"
-            >about us</NuxtLink
+            >{{$t('menu_about')}}</NuxtLink
           >
         </li>
         <li>
           <NuxtLink to="/products" class="capitalize text-black"
-            >products</NuxtLink
+            >{{$t('menu_products')}}</NuxtLink
           >
         </li>
       </ul>
@@ -55,7 +55,7 @@
         <NuxtLink
           to="/contact-us"
           class="capitalize block px-8 py-2 bg-[#BF2C7B] !text-white-light rounded-full shadow-lg"
-          >contact us</NuxtLink
+          >{{$t('menu_contact')}}</NuxtLink
         >
       </div>
     </div>
