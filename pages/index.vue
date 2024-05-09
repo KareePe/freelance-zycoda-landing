@@ -17,7 +17,7 @@
           "
         >
           <div
-            class="bg-gradient-to-b from-pink to-transparent w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
+            class="bg-gradient-to-t from-blue to-blue/20 w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
           ></div>
           <div
             class="p-[20px] h-full relative z-[9] flex flex-col justify-between"
@@ -49,7 +49,7 @@
           "
         >
           <div
-            class="bg-gradient-to-b from-blue to-transparent w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
+            class="bg-gradient-to-t from-blue to-black/50 w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
           ></div>
           <div
             class="p-[20px] h-full relative z-[9] flex flex-col justify-between"
@@ -84,7 +84,7 @@
           "
         >
           <div
-            class="bg-gradient-to-b from-black to-transparent w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
+            class="bg-gradient-to-t from-blue to-black/50 w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
           ></div>
           <div
             class="p-[20px] h-full relative z-[9] flex flex-col justify-between"
@@ -114,7 +114,7 @@
     </div>
   </section>
 
-  <section class="testimonial w-full pt-24 bg-black">
+  <section class="testimonial w-full py-24 bg-black">
     <div class="container mx-auto p-4">
       <h2
         class="sm:text-[55px] text-[35px] font-bold capitalize text-white-light text-center"
@@ -123,125 +123,207 @@
         trusted solutions."
       </h2>
     </div>
-
-    <div class="mt-[50px]">
-      <swiper
-        :slidesPerView="1"
-        :spaceBetween="0"
-        :centeredSlides="false"
-        :autoplay="{
-          delay: 2500,
-          disableOnInteraction: false,
-        }"
-        :pagination="{
-          clickable: true,
-        }"
-        :navigation="false"
-        :breakpoints="{
-          '480': {
-            slidesPerView: 1,
-          },
-          '640': {
-            slidesPerView: 2,
-          },
-          '768': {
-            slidesPerView: 2,
-          },
-          '1024': {
-            slidesPerView: 4,
-          },
-        }"
-        :modules="modules"
-        class="mySwiper"
-      >
-        <swiper-slide>
-          <div
-            class="group relative cursor-pointer h-[530px] bg-pink p-4 flex justify-center items-center"
-          >
-            <div class="text-center">
-              <h3
-                class="font-extrabold text-[#fff] text-[18px] group-hover:text-[20px] transition-all duration-300"
+    <!-- :autoplay="{
+            delay: 2500,
+            disableOnInteraction: false,
+          }" -->
+    <div class="container mx-auto p-4">
+      <div class="mt-[50px]">
+        <swiper
+          :slidesPerView="1"
+          :spaceBetween="30"
+          :centeredSlides="false"
+          :autoplay="{
+            delay: 2500,
+            disableOnInteraction: false,
+          }"
+          :loop="true"
+          :pagination="{
+            clickable: true,
+          }"
+          :navigation="true"
+          :breakpoints="{
+            '480': {
+              slidesPerView: 1,
+            },
+            '640': {
+              slidesPerView: 2,
+            },
+            '768': {
+              slidesPerView: 2,
+            },
+            '1024': {
+              slidesPerView: 3,
+            },
+          }"
+          :modules="modules"
+          class="mySwiper my-[50px]"
+        >
+          <swiper-slide>
+            <div
+              class="group relative cursor-pointer min-h-[430px] bg-white-light p-4 flex justify-center items-start shadow-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34"
+                height="34"
+                viewBox="0 0 24 24"
+                class="absolute top-8 left-[50%] -translate-x-[50%]"
               >
-                {{ $t("emp_1") }}
-              </h3>
-
-              <div
-                class="text-[#fff] text-[14px] mt-4 absolute z-[9] bottom-4 text-left group-hover:underline"
-              >
-                <p>Chinaphan Sukakarnpadoong</p>
-                <p>Operation Excellence and Industry 4.0 Director</p>
-                <p>SCG Cement Building Materials</p>
+                <path
+                  fill="#BF2C7B"
+                  d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"
+                />
+              </svg>
+              <div class="text-center mt-[75px]">
+                <h3
+                  class="font-extrabold text-black text-[18px] group-hover:text-[19px] transition-all duration-300"
+                >
+                  {{ $t("emp_1") }}
+                </h3>
+                <div
+                  class="max-w-[120px] h-[5px] my-[25px] mx-auto bg-blue/0"
+                ></div>
+                <div
+                  class="text-black w-full text-[14px] mt-4 absolute z-[9] bottom-6 left-0 text-center group-hover:underline"
+                >
+                  <img
+                    src="/images/testimonial/test-1.png"
+                    class="w-[65px] h-[65px] my-[25px] ml-[50%] -translate-x-[50%]"
+                    alt=""
+                  />
+                  <p>Chinaphan Sukakarnpadoong</p>
+                  <p>Operation Excellence and Industry 4.0 Director</p>
+                  <p>SCG Cement Building Materials</p>
+                </div>
               </div>
             </div>
-          </div>
-        </swiper-slide>
+          </swiper-slide>
 
-        <swiper-slide>
-          <div
-            class="group relative cursor-pointer h-[530px] bg-blue p-4 flex justify-center items-center"
-          >
-            <div class="text-center">
-              <h3
-                class="font-extrabold text-[#fff] text-[18px] group-hover:text-[20px] transition-all duration-300"
+          <swiper-slide>
+            <div
+              class="group relative cursor-pointer min-h-[430px] bg-white-light p-4 flex justify-center items-start shadow-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34"
+                height="34"
+                viewBox="0 0 24 24"
+                class="absolute top-8 left-[50%] -translate-x-[50%]"
               >
-                {{ $t("emp_2") }}
-              </h3>
-
-              <div
-                class="text-[#fff] text-[14px] mt-4 absolute z-[9] bottom-4 text-left group-hover:underline"
-              >
-                <p>Niwit Khruesarn</p>
-                <p>Maintenance & Engineering Manager</p>
-                <p>Government Pharmaceutical Organization (GPO)</p>
+                <path
+                  fill="#BF2C7B"
+                  d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"
+                />
+              </svg>
+              <div class="text-center mt-[75px]">
+                <h3
+                  class="font-extrabold min-h-[135px] text-black text-[18px] group-hover:text-[19px] transition-all duration-300"
+                >
+                  {{ $t("emp_2") }}
+                </h3>
+                <div
+                  class="max-w-[120px] h-[5px] my-[25px] mx-auto bg-blue/0"
+                ></div>
+                <div
+                  class="text-black w-full text-[14px] mt-4 absolute z-[9] bottom-6 left-0 text-center group-hover:underline"
+                >
+                  <img
+                    src="/images/testimonial/test-2.png"
+                    class="w-[65px] h-[65px] my-[25px] ml-[50%] -translate-x-[50%]"
+                    alt=""
+                  />
+                  <p>Niwit Khruesarn</p>
+                  <p>Maintenance & Engineering Manager</p>
+                  <p>Government Pharmaceutical Organization (GPO)</p>
+                </div>
               </div>
             </div>
-          </div>
-        </swiper-slide>
+          </swiper-slide>
 
-        <swiper-slide>
-          <div
-            class="group relative cursor-pointer h-[530px] bg-white-light p-4 flex justify-center items-center"
-          >
-            <div class="text-center">
-              <h3
-                class="font-extrabold text-black text-[18px] group-hover:text-[20px] transition-all duration-300"
+          <swiper-slide>
+            <div
+              class="group relative cursor-pointer min-h-[430px] bg-white-light p-4 flex justify-center items-start shadow-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34"
+                height="34"
+                viewBox="0 0 24 24"
+                class="absolute top-8 left-[50%] -translate-x-[50%]"
               >
-                {{ $t("emp_3") }}
-              </h3>
-
-              <div
-                class="text-black text-[14px] mt-4 absolute z-[9] bottom-4 text-left group-hover:underline"
-              >
-                <p>Soontorn Sri-on</p>
-                <p>Systematic Preventive Maintenance Specialist</p>
-                <p>SCG Cement Building Materials</p>
+                <path
+                  fill="#BF2C7B"
+                  d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"
+                />
+              </svg>
+              <div class="text-center mt-[75px]">
+                <h3
+                  class="font-extrabold min-h-[135px] text-black text-[18px] group-hover:text-[19px] transition-all duration-300"
+                >
+                  {{ $t("emp_3") }}
+                </h3>
+                <div
+                  class="max-w-[120px] h-[5px] my-[25px] mx-auto bg-blue/0"
+                ></div>
+                <div
+                  class="text-black w-full text-[14px] mt-4 absolute z-[9] bottom-6 left-0 text-center group-hover:underline"
+                >
+                  <img
+                    src="/images/testimonial/test-3.png"
+                    class="w-[65px] h-[65px] my-[25px] ml-[50%] -translate-x-[50%]"
+                    alt=""
+                  />
+                  <p>Soontorn Sri-on</p>
+                  <p>Systematic Preventive Maintenance Specialist</p>
+                  <p>SCG Cement Building Materials</p>
+                </div>
               </div>
             </div>
-          </div>
-        </swiper-slide>
+          </swiper-slide>
 
-        <swiper-slide>
-          <div
-            class="group relative cursor-pointer h-[530px] bg-[#000] p-4 flex justify-center items-center"
-          >
-            <div class="text-center">
-              <h3
-                class="font-extrabold text-[#fff] text-[18px] group-hover:text-[20px] transition-all duration-300"
+          <swiper-slide>
+            <div
+              class="group relative cursor-pointer min-h-[430px] bg-white-light p-4 flex justify-center items-start shadow-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34"
+                height="34"
+                viewBox="0 0 24 24"
+                class="absolute top-8 left-[50%] -translate-x-[50%]"
               >
-                {{ $t("emp_4") }}
-              </h3>
-
-              <div
-                class="text-[#fff] text-[14px] mt-4 absolute z-[9] bottom-4 text-left group-hover:underline"
-              >
-                <p>Weerapong Chootong</p>
-                <p>Energy Control SectionManager</p>
-                <p>Bangkok Solar Power</p>
+                <path
+                  fill="#BF2C7B"
+                  d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"
+                />
+              </svg>
+              <div class="text-center mt-[75px]">
+                <h3
+                  class="font-extrabold min-h-[135px] text-black text-[18px] group-hover:text-[19px] transition-all duration-300"
+                >
+                  {{ $t("emp_4") }}
+                </h3>
+                <div
+                  class="max-w-[120px] h-[5px] my-[25px] mx-auto bg-blue/0"
+                ></div>
+                <div
+                  class="text-black w-full text-[14px] mt-4 absolute z-[9] bottom-6 left-0 text-center group-hover:underline"
+                >
+                  <img
+                    src="/images/testimonial/test-4.png"
+                    class="w-[65px] h-[65px] my-[25px] ml-[50%] -translate-x-[50%]"
+                    alt=""
+                  />
+                  <p>Weerapong Chootong</p>
+                  <p>Energy Control SectionManager</p>
+                  <p>Bangkok Solar Power</p>
+                </div>
               </div>
             </div>
-          </div>
-        </swiper-slide>
-      </swiper>
+          </swiper-slide>
+        </swiper>
+      </div>
     </div>
   </section>
 
@@ -524,95 +606,185 @@
         :onBeforeSlide="onBeforeSlide"
         class="mt-[50px]"
       >
-        <a href="/images/activities/PastActivity_Automation2024_1.jpg" class="block relative group">
-          <div class=" bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"></div>
+        <a
+          href="/images/activities/PastActivity_Automation2024_1.jpg"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
             src="/images/activities/PastActivity_Automation2024_1.jpg"
           />
-          <p class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]">Automation2024</p>
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Automation2024
+          </p>
         </a>
-        <a href="/images/activities/PastActivity_SM2023_2.jpg" class="block relative group">
-          <div class=" bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"></div>
+        <a
+          href="/images/activities/PastActivity_SM2023_2.jpg"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
             src="/images/activities/PastActivity_SM2023_2.jpg"
           />
-          <p class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]">SM2023</p>
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            SM2023
+          </p>
         </a>
-        <a href="/images/activities/PastActivity_SM2023_1.jpg" class="block relative group">
-          <div class=" bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"></div>
+        <a
+          href="/images/activities/PastActivity_SM2023_1.jpg"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
             src="/images/activities/PastActivity_SM2023_1.jpg"
           />
-          <p class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]">SM2023</p>
-        </a> 
-        <a href="/images/activities/PastActivity_Automation2024_3.jpg" class="block relative group">
-          <div class=" bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"></div>
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            SM2023
+          </p>
+        </a>
+        <a
+          href="/images/activities/PastActivity_Automation2024_3.jpg"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
             src="/images/activities/PastActivity_Automation2024_3.jpg"
           />
-          <p class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]">Automation2024</p>
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Automation2024
+          </p>
         </a>
-        <a href="/images/activities/PastActivity_YT2024_2.jpg" class="block relative group">
-          <div class=" bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"></div>
+        <a
+          href="/images/activities/PastActivity_YT2024_2.jpg"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
             src="/images/activities/PastActivity_YT2024_2.jpg"
           />
-          <p class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]">YT2024</p>
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            YT2024
+          </p>
         </a>
-        <a href="/images/activities/PastActivity_YT2024_1.jpg" class="block relative group">
-          <div class=" bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"></div>
+        <a
+          href="/images/activities/PastActivity_YT2024_1.jpg"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
             src="/images/activities/PastActivity_YT2024_1.jpg"
           />
-          <p class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]">YT2024</p>
-        </a> 
-        <a href="/images/activities/PastActivity_Automation2024_2.jpg" class="block relative group">
-          <div class=" bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"></div>
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            YT2024
+          </p>
+        </a>
+        <a
+          href="/images/activities/PastActivity_Automation2024_2.jpg"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
             src="/images/activities/PastActivity_Automation2024_2.jpg"
           />
-          <p class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]">Automation2024</p>
-        </a> 
-        <a href="/images/activities/PastActivity_Techsauce2023_1.jpg" class="block relative group">
-          <div class=" bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"></div>
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Automation2024
+          </p>
+        </a>
+        <a
+          href="/images/activities/PastActivity_Techsauce2023_1.jpg"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
             src="/images/activities/PastActivity_Techsauce2023_1.jpg"
           />
-          <p class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]">Techsauce2023</p>
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Techsauce2023
+          </p>
         </a>
-        <a href="/images/activities/PastActivity_Techsauce2023_2.jpg" class="block relative group">
-          <div class=" bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"></div>
+        <a
+          href="/images/activities/PastActivity_Techsauce2023_2.jpg"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
             src="/images/activities/PastActivity_Techsauce2023_2.jpg"
           />
-          <p class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]">Techsauce2023</p>
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Techsauce2023
+          </p>
         </a>
-        <a href="/images/activities/PastActivity_Techsauce2023_3.jpg" class="block relative group">
-          <div class=" bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"></div>
+        <a
+          href="/images/activities/PastActivity_Techsauce2023_3.jpg"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
             src="/images/activities/PastActivity_Techsauce2023_3.jpg"
           />
-          <p class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]">Techsauce2023</p>
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Techsauce2023
+          </p>
         </a>
       </lightgallery>
     </div>

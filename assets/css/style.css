@@ -14,6 +14,23 @@ body {
     left: 50px !important; */
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: #fff !important;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50% !important;
+    @apply shadow-lg
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    font-size: 16px !important;
+    @apply text-pink
+}
+
 #lg-container-1 {
     position: relative;
     z-index: 99999;
