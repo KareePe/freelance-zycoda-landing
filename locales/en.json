@@ -1,4 +1,9 @@
 {
+  "menu_home":"home",
+  "menu_about":"about us",
+  "menu_products":"products",
+  "menu_contact":"contact us",
+  "search":"search",
   "description_product_index": "Our products and services that meet the needs of every use. You can register to try it out.",
   "emp_1": "“ZYCODA is a smart tool that helps my team to increase working process stability and machine reliability.”",
   "emp_2": "“ZYCODA is a powerful system in the area of early damaged detection. We are looking forwards to implement this software to other types of machines.”",
@@ -20,8 +25,8 @@
   "interest":"Interested Products *",
   "selected":"selected",
   "label_name":"Full Name *",
-  "label_mail":"Email",
+  "label_mail":"Email *",
   "label_phone":"Phone Number *",
-  "label_company":"Company Name",
-  "done":"Your information well-received! We will definitely recontact you as soon as possible."
+  "label_company":"Company Name *",
+  "done":"Your information well-received!<br>We will definitely recontact you as soon as possible."
 }

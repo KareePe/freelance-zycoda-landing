@@ -1,16 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 html {
     scroll-behavior: smooth !important;
 }
 
 body {
-    font-family: "Raleway",'IBM Plex Sans Thai', sans-serif;
+    font-family: "Open Sans", 'Noto Sans Thai', sans-serif;
 }
 
 .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
     /* bottom: 50px !important;
     text-align: left !important;
     left: 50px !important; */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: #fff !important;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50% !important;
+    @apply shadow-lg
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    font-size: 16px !important;
+    @apply text-pink
+}
+
+#lg-container-1 {
+    position: relative;
+    z-index: 99999;
+}
+
+.lightgallery-vue {
+    column-count: 4;
+    column-gap: 10px;
+}
+
+@media screen and (max-width: 991px) {
+    .lightgallery-vue {
+        column-count: 2;
+    }
+}
+
+.lightgallery-vue a {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+
+.lightgallery-vue a>img {
+    grid-row: 1 / -1;
+    grid-column: 1;
 }

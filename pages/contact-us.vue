@@ -1,10 +1,10 @@
 <template>
   <section class="contact mt-[70px]" v-if="done === false">
-    <div class="w-full flex justify-center py-[50px]">
+    <div class="w-full justify-center py-[50px] hidden">
       <img src="/images/logo/dark/logo-dark.svg" class="w-[350px]" alt="" />
     </div>
 
-    <div class="container mx-auto p-4">
+    <div class="container mx-auto p-4 py-[40px]">
       <h1 class="font-bold text-[20px] text-center text-pink">
         {{ $t("ask") }}
       </h1>
@@ -36,7 +36,7 @@
             />
 
             <TextElement
-              name="company_name"
+              name="name"
               :label="$t('label_name')"
               placeholder=""
               :rules="['required']"
@@ -172,7 +172,7 @@
       class="w-full md:px-[150px] px-[25px] h-[650px] bg-[url(/images/bg-footer.jpg)] bg-cover bg-left-bottom flex justify-center items-center"
     >
       <div>
-        <p class="font-bold text-[45px] text-center">{{ $t("done") }}</p>
+        <div v-html="$t('done')" class="font-bold text-[35px] text-center"></div>
 
         <img
           src="/images/logo/dark/logo-dark.svg"
@@ -198,9 +198,9 @@ let loading = ref(false);
 let done = ref(false);
 
 const interestedLoanItem = [
-  { label: "Z-MPRO", value: "Z-MPRO" },
-  { label: "Z-CONNECT", value: "Z-CONNECT" },
-  { label: "Z-PAP", value: "Z-PAP" },
+  { label: "Z-MPRO (CMMS Platform)", value: "Z-MPRO (CMMS Platform)" },
+  { label: "Z-CONNECT (Connectivity Platform)", value: "Z-CONNECT (Connectivity Platform)" },
+  { label: "Z-PAP (Predictive Analytics Platform)", value: "Z-PAP (Predictive Analytics Platform)" },
 ];
 
 // ! เช็คให้กดได้แค่ตัวเลข

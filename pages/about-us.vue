@@ -1,31 +1,32 @@
 <template>
-  <section class="team mt-[70px]">
-    <div class="w-full flex flex-wrap">
+  <section
+    class="team mt-[70px] md:h-[500px] h-[250px] bg-[url(/images/AboutUs1_Team.jpg)] bg-black/45 bg-blend-multiply bg-center bg-cover flex justify-center items-center"
+  >
+    <div>
+      <img
+        src="/images/logo/light/logo-light.svg"
+        class="max-w-[350px] ml-[50%] -translate-x-[50%]"
+        alt=""
+      />
       <div
-        class="md:basis-6/12 md:order-1 order-2 text-center md:h-[450px] h-[250px] flex justify-center items-center px-[15px]"
-      >
-        <div>
-          <img
-            src="/images/logo/dark/logo-dark.svg"
-            class="w-[150px] ml-[50%] -translate-x-[50%]"
-            alt=""
-          />
-          <p class="text-black mt-[15px]">{{ $t("zycoda_about") }}</p>
-        </div>
-      </div>
-      <div
-        class="md:basis-6/12 md:order-2 order-1 text-center h-[450px] flex justify-center items-center"
-      >
-        <img
-          src="/images/AboutUs1_Team.jpg"
-          class="w-full h-[450px] object-cover"
-          alt=""
-        />
-      </div>
+        v-html="locale === 'en' ? zycoda_about_eng : zycoda_about_th"
+        class="text-[#fff] text-center mt-[15px]"
+      ></div>
     </div>
   </section>
 
-  <section class="trust">
+  <section class="container mx-auto p-4 py-[50px]">
+    <h1 class="text-[45px] text-black font-bold text-center">
+      “EVERYONE CAN BUILD AI”
+    </h1>
+    <p
+      class="text-black text-center md:ml-[50%] ml-0 md:-translate-x-[50%] -translate-x-0 mt-4"
+    >
+      {{ $t("cta") }}
+    </p>
+  </section>
+
+  <section class="trust-video">
     <div class="w-full flex flex-wrap">
       <div
         class="md:basis-6/12 basis-full text-center h-[450px] flex justify-center items-center"
@@ -43,7 +44,26 @@
         ></iframe>
       </div>
       <div
-        class="md:basis-6/12 text-center md:h-[450px] h-[fit-content] flex justify-center items-center p-[20px]"
+        class="md:basis-6/12 text-center md:h-[450px] bg-black h-[fit-content] flex justify-center items-center p-[20px]"
+      >
+        <div>
+          <h1 class="text-pink text-[35px] font-bold text-center">
+            Zycoda's Products
+          </h1>
+          <p class="text-white-light text-center">
+            AI solutions for mechanical maintenance management system to
+            increase machine performance efficiency and reduce costs of
+            production
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="w-full flex flex-wrap">
+      <div
+        class="basis-full text-center md:h-[450px] h-[fit-content] flex justify-center items-center p-[20px]"
       >
         <div>
           <div
@@ -87,166 +107,237 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="cta bg-black">
     <div class="container mx-auto p-4">
-      <div class="text-center text-white-light py-[100px]">
-        <img
-          src="/images/logo/light/logo-light.svg"
-          class="w-[150px] ml-[50%] -translate-x-[50%]"
-          alt=""
-        />
-        <p class="font-bold md:text-[55px] text-[35px] my-[25px]">
-          “EVERYONE CAN BUILD AI”
-        </p>
-        <p>{{ $t("cta") }}</p>
-      </div>
+      <img src="/images/AboutUs2.png" class="w-full" alt="" />
     </div>
   </section>
 
-  <section class="past-activities bg-white-light py-[100px]">
-    <div class="container mx-auto p-4">
+  <section
+    class="past-activities bg-white-light pb-[100px] pt-[100px] mt-[70px]"
+  >
+    <div class="">
       <h2
         class="sm:text-[55px] text-center text-[35px] font-bold capitalize text-black"
       >
         Past-Activities
       </h2>
 
-      <lightgallery
-        :settings="{
-          speed: 500,
-          plugins: plugins,
-          lastRow: false,
-          rowHeight: 180,
-          margins: 5,
-        }"
-        :onInit="onInit"
-        :onBeforeSlide="onBeforeSlide"
-        class="mt-[50px]"
-      >
-        <a href="/images/activities/PastActivity_Automation2024_1.jpg">
+      <div class="lightgallery-vue mt-[50px]">
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
             src="/images/activities/PastActivity_Automation2024_1.jpg"
           />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Automation2024
+          </p>
         </a>
-        <a href="/images/activities/PastActivity_Automation2024_2.jpg">
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
-            src="/images/activities/PastActivity_Automation2024_2.jpg"
+            src="/images/activities/PastActivity_SM2023_2.jpg"
           />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            SM2023
+          </p>
         </a>
-        <a href="/images/activities/PastActivity_Automation2024_3.jpg">
-          <img
-            alt="img1"
-            class="max-w-full block"
-            src="/images/activities/PastActivity_Automation2024_3.jpg"
-          />
-        </a>
-        <a href="/images/activities/PastActivity_SM2023_1.jpg">
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
             src="/images/activities/PastActivity_SM2023_1.jpg"
           />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            SM2023
+          </p>
         </a>
-        <a href="/images/activities/PastActivity_Techsauce2023_1.jpg">
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
-            src="/images/activities/PastActivity_Techsauce2023_1.jpg"
+            src="/images/activities/PastActivity_Automation2024_3.jpg"
           />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Automation2024
+          </p>
         </a>
-        <a href="/images/activities/PastActivity_Techsauce2023_2.jpg">
-          <img
-            alt="img1"
-            class="max-w-full block"
-            src="/images/activities/PastActivity_Techsauce2023_2.jpg"
-          />
-        </a>
-        <a href="/images/activities/PastActivity_Techsauce2023_3.jpg">
-          <img
-            alt="img1"
-            class="max-w-full block"
-            src="/images/activities/PastActivity_Techsauce2023_3.jpg"
-          />
-        </a>
-        <a href="/images/activities/PastActivity_YT2024_1.jpg">
-          <img
-            alt="img1"
-            class="max-w-full block"
-            src="/images/activities/PastActivity_YT2024_1.jpg"
-          />
-        </a>
-        <a href="/images/activities/PastActivity_YT2024_2.jpg">
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
           <img
             alt="img1"
             class="max-w-full block"
             src="/images/activities/PastActivity_YT2024_2.jpg"
           />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            YT2024
+          </p>
         </a>
-      </lightgallery>
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_YT2024_1.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            YT2024
+          </p>
+        </a>
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Automation2024_2.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Automation2024
+          </p>
+        </a>
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Techsauce2023_1.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Techsauce2023
+          </p>
+        </a>
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Techsauce2023_2.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Techsauce2023
+          </p>
+        </a>
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Techsauce2023_3.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Techsauce2023
+          </p>
+        </a>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import Lightgallery from "lightgallery/vue";
-import lgThumbnail from "lightgallery/plugins/thumbnail";
-import lgZoom from "lightgallery/plugins/zoom";
+const { locale } = useI18n();
 
-// If you are using scss you can skip the css imports below and use scss instead
-// import styles from "lightgallery/scss/lightgallery.scss";
+const zycoda_about_eng =
+  "AI solution for mechanical maintenance management system to increase <br> machine performance efficiency and reduce costs of production";
 
-const plugins = [lgThumbnail, lgZoom];
+const zycoda_about_th =
+  "AI solution สำหรับการบริหารจัดการงานซ่อมบำรุงที่ช่วยเพิ่มประสิทธิภาพการใช้งานของเครื่องจักรและช่วยลดต้นทุนในกระบวนการผลิต";
 
-const onInit = () => {
-  console.log("lightGallery has been initialized");
-};
-const onBeforeSlide = () => {
-  console.log("calling before slide");
-};
+useSeoMeta({
+  title: "ZYCODA | EVERYONE CAN BUILD AI",
+  ogTitle: "ZYCODA | EVERYONE CAN BUILD AI",
+  description:
+    "AI solution สำหรับการบริหารจัดการงานซ่อมบำรุงที่ช่วยเพิ่มประสิทธิภาพการใช้งานของเครื่องจักรและช่วยลดต้นทุนในกระบวนการผลิต",
+  ogDescription:
+    "AI solution สำหรับการบริหารจัดการงานซ่อมบำรุงที่ช่วยเพิ่มประสิทธิภาพการใช้งานของเครื่องจักรและช่วยลดต้นทุนในกระบวนการผลิต",
+  ogImage: "/images/AboutUs1_Team.jpg",
+  twitterCard: "summary_large_image",
+});
 </script>
 
-<style>
-@import "lightgallery/css/lightgallery.css";
-@import "lightgallery/css/lg-thumbnail.css";
-@import "lightgallery/css/lg-zoom.css";
-
-#lg-container-1 {
-  position: relative;
-  z-index: 99999;
-}
-
-.lightgallery-vue {
-  column-count: 4;
-  column-gap: 10px;
-}
-
-@media screen and (max-width: 991px) {
-  .lightgallery-vue {
-    column-count: 2;
-  }
-}
-
-/* .lightgallery-vue a > img {
-  max-width: 100%;
-  display: block;
-} */
-
-.lightgallery-vue a {
-  margin: 0;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  margin-bottom: 10px;
-  break-inside: avoid;
-}
-
-.lightgallery-vue a > img {
-  grid-row: 1 / -1;
-  grid-column: 1;
-}
-</style>
+<style></style>
