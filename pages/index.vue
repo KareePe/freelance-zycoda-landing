@@ -123,10 +123,7 @@
         trusted solutions."
       </h2>
     </div>
-    <!-- :autoplay="{
-            delay: 2500,
-            disableOnInteraction: false,
-          }" -->
+
     <div class="container mx-auto p-4">
       <div class="mt-[50px]">
         <swiper
@@ -594,6 +591,199 @@
         </div>
       </div> -->
 
+      <div class="lightgallery-vue mt-[50px]">
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Automation2024_1.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Automation2024
+          </p>
+        </a>
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_SM2023_2.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            SM2023
+          </p>
+        </a>
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_SM2023_1.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            SM2023
+          </p>
+        </a>
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Automation2024_3.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Automation2024
+          </p>
+        </a>
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_YT2024_2.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            YT2024
+          </p>
+        </a>
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_YT2024_1.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            YT2024
+          </p>
+        </a>
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Automation2024_2.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Automation2024
+          </p>
+        </a>
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Techsauce2023_1.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Techsauce2023
+          </p>
+        </a>
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Techsauce2023_2.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Techsauce2023
+          </p>
+        </a>
+        <a
+          href="https://www.facebook.com/zycoda.saas"
+          target="_blank"
+          class="block relative group"
+        >
+          <div
+            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
+          ></div>
+          <img
+            alt="img1"
+            class="max-w-full block"
+            src="/images/activities/PastActivity_Techsauce2023_3.jpg"
+          />
+          <p
+            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
+          >
+            Techsauce2023
+          </p>
+        </a>
+      </div>
+
       <lightgallery
         :settings="{
           speed: 500,
@@ -604,7 +794,7 @@
         }"
         :onInit="onInit"
         :onBeforeSlide="onBeforeSlide"
-        class="mt-[50px]"
+        class="mt-[50px] hidden"
       >
         <a
           href="/images/activities/PastActivity_Automation2024_1.jpg"
