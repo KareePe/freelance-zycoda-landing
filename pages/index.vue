@@ -1,5 +1,6 @@
 <template>
   <SlideBanner />
+  
   <section class="product w-full pt-[25px] bg-white-light">
     <div class="container mx-auto p-4">
       <h2 class="sm:text-[55px] text-[35px] font-bold capitalize text-black">
