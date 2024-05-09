@@ -785,7 +785,7 @@
         </a>
       </div>
 
-      <lightgallery
+      <!-- <lightgallery
         :settings="{
           speed: 500,
           plugins: plugins,
@@ -977,7 +977,7 @@
             Techsauce2023
           </p>
         </a>
-      </lightgallery>
+      </lightgallery> -->
     </div>
   </section>
 </template>
