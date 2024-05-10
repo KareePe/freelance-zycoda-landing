@@ -1,10 +1,270 @@
 <template>
-  <section class="product mt-[70px]">
+  <section class="product mt-[70px] bg-white-light">
     <div class="py-[50px] text-center">
       <h1 class="font-bold text-[45px]">Product Working Flow</h1>
     </div>
 
-    <div class="w-full flex flex-wrap">
+    <img
+      src="/images/jump_en.png"
+      class="absolute left-[50px] mt-[20px] arrow md:block hidden"
+      alt=""
+    />
+    <!-- <div
+      class="w-[2px] min-h-[350px] bg-black absolute left-[50px] mt-[20px] arrow"
+    ></div> -->
+    <div class="container mx-auto p-4">
+      <section class="flex flex-nowrap">
+        <div class="max-w-[10%] w-full h-full relative md:block hidden"></div>
+        <div class="md:max-w-[90%] max-w-full w-full">
+          <p class="text-black text-[14px] font-bold">
+            Begin your digital transformation
+          </p>
+          <div class="mb-[65px]">
+            <h1 class="text-[45px] text-pink font-bold">Z-MPRO</h1>
+            <div class="w-full h-[2px] bg-black my-[15px]"></div>
+            <div class="flex lg:flex-nowrap flex-wrap gap-[20px]">
+              <div
+                class="lg:basis-6/12 basis-full min-h-[290px] bg-blue py-5 px-8 rounded-lg  mt-8"
+              >
+                <div>
+                  <h2 class="text-[18px] text-[#fff] font-bold">
+                    Managing all maintenance components within one platform
+                  </h2>
+                  <p class="text-[16px] text-[#fff] mt-[20px]">
+                    If your factory has more than 30 machines and more than 5
+                    employees in a maintenance department, Z-MPRO platform can
+                    help you to generate and monitor workload along with your
+                    ISO quality control system
+                  </p>
+                  <NuxtLink
+                    to="/contact-us"
+                    class="text-[#fff] block w-[fit-content] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 px-8 py-2 rounded-full shadow-lg mt-[15px]"
+                    >free trial</NuxtLink
+                  >
+                </div>
+              </div>
+              <div class="lg:basis-6/12 basis-full">
+                <div
+                  class="lg:max-w-[600px] max-w-[300px] ml-[50%] -translate-x-[50%] w-full h-full"
+                >
+                  <swiper
+                    :pagination="{
+                      dynamicBullets: true,
+                    }"
+                    :autoplay="{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }"
+                    :modules="modules"
+                    class="mySwiper mt-8 bg-[#fff] rounded-lg"
+                  >
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z_MPRO_1.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z_MPRO_2.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z_MPRO_3.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z_MPRO_4.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z_MPRO_5.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z_MPRO_6.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                  </swiper>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-[65px]">
+            <h1 class="text-[45px] text-pink font-bold text-right">
+              Z-Connect
+            </h1>
+            <div class="w-full h-[2px] bg-black my-[15px]"></div>
+            <div class="flex lg:flex-nowrap flex-wrap gap-[20px]">
+              <div class="lg:basis-6/12 basis-full">
+                <div
+                  class="lg:max-w-[600px] max-w-[300px] ml-[50%] -translate-x-[50%] w-full h-full"
+                >
+                  <swiper
+                    :pagination="{
+                      dynamicBullets: true,
+                    }"
+                    :autoplay="{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }"
+                    :modules="modules"
+                    class="mySwiper mt-8 bg-[#fff] rounded-lg"
+                  >
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z_Connect_2.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z_Connect_1.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z-Connect.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                  </swiper>
+                </div>
+              </div>
+              <div
+                class="lg:basis-6/12 basis-full min-h-[290px] bg-black py-5 px-8 rounded-lg  mt-8"
+              >
+                <div>
+                  <h2 class="text-[18px] text-[#fff] font-bold"><pre></pre></h2>
+                  <p class="text-[16px] text-[#fff] mt-[20px]">
+                    Even you have special machines or bottleneck machines 80% of
+                    utilization, Z-Connect still be able to generate machine
+                    data through sensors and show their real-time performance in
+                    a form of dashboard
+                  </p>
+                  <div class="w-full flex justify-end">
+                    <NuxtLink
+                      to="/contact-us"
+                      class="text-[#fff] block w-[fit-content] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 px-8 py-2 rounded-full shadow-lg mt-[15px]"
+                      >free trial</NuxtLink
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-[65px]">
+            <h1 class="text-[45px] text-pink font-bold">Z-PAP</h1>
+            <div class="w-full h-[2px] bg-black my-[15px]"></div>
+            <div class="flex lg:flex-nowrap flex-wrap gap-[20px]">
+              <div
+                class="lg:basis-6/12 basis-full min-h-[290px] bg-[#fff] py-5 px-8 rounded-lg  mt-8"
+              >
+                <div>
+                  <h2 class="text-[18px] text-black font-bold">
+                    <pre></pre>
+                  </h2>
+                  <p class="text-[16px] text-black mt-[20px]">
+                    Z-PAP with flexible functions can operate with machines
+                    having various condition, and the platform will notify
+                    workers before machine- breakdown. Solutions are also
+                    suggested based on machine learning
+                  </p>
+                  <NuxtLink
+                    to="/contact-us"
+                    class="text-[#fff] block w-[fit-content] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 px-8 py-2 rounded-full shadow-lg mt-[15px]"
+                    >free trial</NuxtLink
+                  >
+                </div>
+              </div>
+              <div class="lg:basis-6/12 basis-full">
+                <div
+                  class="lg:max-w-[600px] max-w-[300px] ml-[50%] -translate-x-[50%] w-full h-full"
+                >
+                  <swiper
+                    :pagination="{
+                      dynamicBullets: true,
+                    }"
+                    :autoplay="{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }"
+                    :modules="modules"
+                    class="mySwiper mt-8 bg-[#fff] rounded-lg"
+                  >
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z_PAP_1.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z_PAP_2.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z-PAP.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z_MPRO_4.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z_MPRO_5.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                    <swiper-slide>
+                      <img
+                        src="/images/products/Z_MPRO_6.png"
+                        class="w-full"
+                        alt=""
+                      />
+                    </swiper-slide>
+                  </swiper>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="w-full flex-wrap hidden">
       <div
         class="lg:basis-5/12 md:basis-6/12 basis-full md:order-1 order-2 text-center h-[fit-content] flex justify-center items-center px-[15px] py-[25px] bg-black"
       >
@@ -55,7 +315,7 @@
       </div>
     </div>
 
-    <div class="w-full flex flex-wrap">
+    <div class="w-full hidden flex-wrap">
       <div
         class="lg:basis-7/12 md:basis-6/12 basis-full text-center min-h-[354px] flex justify-center items-center px-[15px] py-[25px]"
       >
@@ -100,7 +360,7 @@
       </div>
     </div>
 
-    <div class="w-full flex flex-wrap">
+    <div class="w-full hidden flex-wrap">
       <div
         class="lg:basis-5/12 md:basis-6/12 basis-full md:order-1 order-2 text-center h-[fit-content] flex justify-center items-center px-[15px] py-[25px] bg-black"
       >
@@ -154,14 +414,57 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
+import "swiper/css";
+
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination, Autoplay } from "swiper/modules";
+
+const onBeforeSlide = () => {
+  console.log("calling before slide");
+};
+
+const onSwiper = (swiper) => {
+  return swiper;
+};
+
+const onSlideChange = () => {};
+
+const modules = [Pagination, Autoplay];
+
+let windowTop = 0;
+
+onMounted(() => {
+  window.addEventListener("scroll", () => {
+    console.log(window.scrollY);
+    const arrow = document.querySelector(".arrow");
+
+    if (window.scrollY >= 170) {
+      arrow.classList.add("!fixed");
+      arrow.classList.add("!top-[85px]");
+    } else {
+      arrow.classList.remove("!fixed");
+      arrow.classList.remove("!top-[85px]");
+    }
+  });
+});
+
 useSeoMeta({
-  title: 'ZYCODA | Product Working Flow',
-  ogTitle: 'ZYCODA | Product Working Flow',
-  description: 'ZYCODA CMMS Software Sensor Monitoring Software Predictive Analytics Platform & Real-Time AI Monitoring',
-  ogDescription: 'ZYCODA CMMS Software Sensor Monitoring Software Predictive Analytics Platform & Real-Time AI Monitoring',
-  ogImage: '/images/products/Z-Connect.png',
-  twitterCard: 'summary_large_image',
-})
+  title: "ZYCODA | Product Working Flow",
+  ogTitle: "ZYCODA | Product Working Flow",
+  description:
+    "ZYCODA CMMS Software Sensor Monitoring Software Predictive Analytics Platform & Real-Time AI Monitoring",
+  ogDescription:
+    "ZYCODA CMMS Software Sensor Monitoring Software Predictive Analytics Platform & Real-Time AI Monitoring",
+  ogImage: "/images/products/Z-Connect.png",
+  twitterCard: "summary_large_image",
+});
 </script>
 
 <style></style>
