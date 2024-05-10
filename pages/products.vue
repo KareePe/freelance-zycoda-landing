@@ -234,27 +234,6 @@
                         alt=""
                       />
                     </swiper-slide>
-                    <swiper-slide>
-                      <img
-                        src="/images/products/Z_MPRO_4.png"
-                        class="w-full"
-                        alt=""
-                      />
-                    </swiper-slide>
-                    <swiper-slide>
-                      <img
-                        src="/images/products/Z_MPRO_5.png"
-                        class="w-full"
-                        alt=""
-                      />
-                    </swiper-slide>
-                    <swiper-slide>
-                      <img
-                        src="/images/products/Z_MPRO_6.png"
-                        class="w-full"
-                        alt=""
-                      />
-                    </swiper-slide>
                   </swiper>
                 </div>
               </div>
