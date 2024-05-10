@@ -24,7 +24,7 @@
             <div class="w-full h-[2px] bg-black my-[15px]"></div>
             <div class="flex lg:flex-nowrap flex-wrap gap-[20px]">
               <div
-                class="lg:basis-6/12 basis-full min-h-[290px] bg-blue py-5 px-8 rounded-lg  mt-8"
+                class="lg:basis-6/12 basis-full min-h-[290px] bg-blue py-5 px-8 rounded-lg mt-8"
               >
                 <div>
                   <h2 class="text-[18px] text-[#fff] font-bold">
@@ -152,7 +152,7 @@
                 </div>
               </div>
               <div
-                class="lg:basis-6/12 basis-full min-h-[290px] bg-black py-5 px-8 rounded-lg  mt-8"
+                class="lg:basis-6/12 basis-full min-h-[290px] bg-black py-5 px-8 rounded-lg mt-8"
               >
                 <div>
                   <h2 class="text-[18px] text-[#fff] font-bold"><pre></pre></h2>
@@ -179,7 +179,7 @@
             <div class="w-full h-[2px] bg-black my-[15px]"></div>
             <div class="flex lg:flex-nowrap flex-wrap gap-[20px]">
               <div
-                class="lg:basis-6/12 basis-full min-h-[290px] bg-[#fff] py-5 px-8 rounded-lg  mt-8"
+                class="lg:basis-6/12 basis-full min-h-[290px] bg-[#fff] py-5 px-8 rounded-lg mt-8"
               >
                 <div>
                   <h2 class="text-[18px] text-black font-bold">
@@ -408,6 +408,23 @@
           class="md:max-w-[65%] max-w-[90%]"
           alt=""
         />
+      </div>
+    </div>
+  </section>
+
+  <section class="product-footer bg-gradient-to-r from-blue to-black">
+    <div class="container mx-auto p-4 py-[100px]">
+      <div>
+        <h3 class="text-[#fff] font-bold text-[45px] text-center">
+          Get professional suggestions
+        </h3>
+        <div class="w-full flex justify-center">
+          <NuxtLink
+            to="/contact-us"
+            class="text-[#fff] block w-[fit-content] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 px-8 py-2 rounded-full shadow-lg mt-[15px]"
+            >free trial</NuxtLink
+          >
+        </div>
       </div>
     </div>
   </section>
