@@ -50,11 +50,10 @@
           <h1 class="text-pink text-[35px] font-bold text-center">
             Zycoda's Products
           </h1>
-          <p class="text-white-light text-center">
-            AI solutions for mechanical maintenance management system to
-            increase machine performance efficiency and reduce costs of
-            production
-          </p>
+          <div
+            v-html="locale === 'en' ? zycoda_about_eng : zycoda_about_th"
+            class="text-white-light text-center"
+          ></div>
         </div>
       </div>
     </div>
@@ -120,7 +119,7 @@
       <h2
         class="sm:text-[55px] text-center text-[35px] font-bold capitalize text-black"
       >
-        Past-Activities
+        {{ $t("pastactivity") }}
       </h2>
 
       <div class="lightgallery-vue mt-[50px]">

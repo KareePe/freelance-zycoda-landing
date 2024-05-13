@@ -27,11 +27,7 @@
 
             <div>
               <h3 class="font-bold text-[#fff] text-[20px]">CMMS Platform</h3>
-              <p class="text-[#fff] mb-[15px]">
-                The comprehensive maintenance system, including PM planning, can
-                easily connect with an ERP system. Moreover, it supports another
-                module called z-PAP for AI predictive maintenance in the future.
-              </p>
+              <p class="text-[#fff] mb-[15px]">{{$t("Z-MPRO")}}</p>
 
               <NuxtLink
                 to="/contact-us"
@@ -61,12 +57,7 @@
               <h3 class="font-bold text-[#fff] text-[20px]">
                 Connectivity Platform
               </h3>
-              <p class="text-[#fff] mb-[15px]">
-                The system connects data for AI predictive maintenance. We
-                provides sensor installation, PLC & SCADA connection, and
-                database connection on either cloud or customer-existing
-                customers.
-              </p>
+              <p class="text-[#fff] mb-[15px]">{{$t("Z-CONNECT")}}</p>
 
               <NuxtLink
                 to="/contact-us"
@@ -96,12 +87,7 @@
               <h3 class="font-bold text-[#fff] text-[20px]">
                 Predictive Analytics Platform
               </h3>
-              <p class="text-[#fff] mb-[15px]">
-                The system works with data, AI, and ML to do predictive
-                maintenance. In addition, this user-friendly platform does not
-                require any coding skills because of its “Anomaly Detection”
-                feature.
-              </p>
+              <p class="text-[#fff] mb-[15px]">{{$t("Z-PAP")}}</p>
 
               <NuxtLink
                 to="/contact-us"
@@ -511,7 +497,7 @@
       <h2
         class="sm:text-[55px] text-center text-[35px] font-bold capitalize text-black"
       >
-        Past-Activities
+      {{$t('pastactivity')}}
       </h2>
 
       <!-- <div class="boxes-con">
