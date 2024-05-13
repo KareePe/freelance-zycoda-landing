@@ -28,13 +28,18 @@
               >
                 <div>
                   <h2 class="text-[18px] text-[#fff] font-bold">
-                    Managing all maintenance components within one platform
+                    {{
+                      locale === "en"
+                        ? "Managing all maintenance components within one platform"
+                        : "การจัดการส่วนประกอบการบำรุงรักษาทั้งหมดภายในแพลตฟอร์มเดียว"
+                    }}
                   </h2>
                   <p class="text-[16px] text-[#fff] mt-[20px]">
-                    If your factory has more than 30 machines and more than 5
-                    employees in a maintenance department, Z-MPRO platform can
-                    help you to generate and monitor workload along with your
-                    ISO quality control system
+                    {{
+                      locale === "en"
+                        ? "If your factory has more than 30 machines and more than 5 employees in a maintenance department, Z-MPRO platform can help you to generate and monitor workload along with your ISO quality control system"
+                        : "หากโรงงานของคุณมีเครื่องจักรมากกว่า 30 เครื่องและพนักงานมากกว่า 5 คนในแผนกบำรุงรักษา แพลตฟอร์ม Z-MPRO สามารถช่วยคุณสร้างและติดตามปริมาณงานพร้อมกับระบบควบคุมคุณภาพ ISO ของคุณได้"
+                    }}
                   </p>
                   <NuxtLink
                     to="/contact-us"
@@ -157,10 +162,11 @@
                 <div>
                   <h2 class="text-[18px] text-[#fff] font-bold"><pre></pre></h2>
                   <p class="text-[16px] text-[#fff] mt-[20px]">
-                    Even you have special machines or bottleneck machines 80% of
-                    utilization, Z-Connect still be able to generate machine
-                    data through sensors and show their real-time performance in
-                    a form of dashboard
+                    {{
+                      locale === "en"
+                        ? "Even you have special machines or bottleneck machines 80% of utilization, Z-Connect still be able to generate machine data through sensors and show their real-time performance in a form of dashboard"
+                        : "แม้ว่าคุณจะมีเครื่องจักรพิเศษหรือเครื่องจักรที่มีปัญหาคอขวดถึง 80% ของการใช้งาน Z-Connect ยังคงสามารถสร้างข้อมูลเครื่องจักรผ่านเซ็นเซอร์และแสดงประสิทธิภาพแบบเรียลไทม์ในรูปแบบของแดชบอร์ด"
+                    }}
                   </p>
                   <div class="w-full flex justify-end">
                     <NuxtLink
@@ -186,10 +192,11 @@
                     <pre></pre>
                   </h2>
                   <p class="text-[16px] text-black mt-[20px]">
-                    Z-PAP with flexible functions can operate with machines
-                    having various condition, and the platform will notify
-                    workers before machine- breakdown. Solutions are also
-                    suggested based on machine learning
+                    {{
+                      locale === "en"
+                        ? "Z-PAP with flexible functions can operate with machines having various condition, and the platform will notify workers before machine- breakdown. Solutions are also suggested based on machine learning"
+                        : "Z-PAP พร้อมฟังก์ชันที่ยืดหยุ่นสามารถทำงานได้กับเครื่องจักรที่มีสภาวะต่างๆ และแพลตฟอร์มจะแจ้งให้พนักงานทราบก่อนที่เครื่องจักรจะเสียหาย นอกจากนี้ยังมีการแนะนำโซลูชันโดยอิงจากการเรียนรู้ของเครื่องด้วย"
+                    }}
                   </p>
                   <NuxtLink
                     to="/contact-us"
@@ -395,7 +402,7 @@
     <div class="container mx-auto p-4 py-[100px]">
       <div>
         <h3 class="text-[#fff] font-bold text-[45px] text-center">
-          Get professional suggestions
+          {{ $t("getpro") }}
         </h3>
         <div class="w-full flex justify-center">
           <NuxtLink
@@ -421,6 +428,8 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination, Autoplay } from "swiper/modules";
+
+const { locale } = useI18n();
 
 const onBeforeSlide = () => {
   console.log("calling before slide");

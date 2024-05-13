@@ -12,7 +12,7 @@
         {{ $t("ask_2") }}
       </p>
 
-      <div class="max-w-[550px] ml-[50%] -translate-x-[50%]">
+      <div class="md:max-w-[550px] w-full md:ml-[50%] ml-0 md:-translate-x-[50%] -translate-x-0">
         <Vueform
           v-model="data"
           ref="form$"
@@ -96,7 +96,7 @@
           </GroupElement>
 
           <ButtonElement name="button" submits :loading="loading">
-            ลงทะเบียน
+            {{ $t('register') }}
           </ButtonElement>
         </Vueform>
 
@@ -104,8 +104,8 @@
           Any problems, Please contact
         </p>
 
-        <ul class="mt-[15px] p-0 flex gap-[10px]">
-          <li class="flex flex-nowrap gap-4 justify-start items-center mb-2">
+        <ul class="mt-[15px] p-0 flex md:flex-nowrap flex-wrap gap-[10px]">
+          <li class="flex md:flex-nowrap flex-wrap gap-4 justify-start items-center mb-2">
             <div
               class="min-w-[45px] h-[45px] rounded-full bg-black flex justify-center items-center"
             >
