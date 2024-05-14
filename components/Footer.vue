@@ -108,7 +108,7 @@
             </li>
           </ul>
         </div>
-        <div class="min-h-[204px]">
+        <div class="min-h-[204px] hidden">
           <p class="text-[20px] font-bold capitalize text-black">Search</p>
           <Vueform
             class="mt-[15px]"

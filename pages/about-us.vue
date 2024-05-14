@@ -1,21 +1,13 @@
 <template>
   <section
-    class="team mt-[70px] md:h-[500px] h-[250px] bg-[url(/images/AboutUs1_Team.jpg)] bg-black/45 bg-blend-multiply bg-center bg-cover flex justify-center items-center"
-  >
-    <div>
-      <img
-        src="/images/logo/light/logo-light.svg"
-        class="max-w-[350px] ml-[50%] -translate-x-[50%]"
-        alt=""
-      />
-      <div
-        v-html="locale === 'en' ? zycoda_about_eng : zycoda_about_th"
-        class="text-[#fff] text-center mt-[15px]"
-      ></div>
-    </div>
-  </section>
+    class="team mt-[70px] md:h-[500px] h-[250px] bg-[url(/images/AboutUs1_Team.jpg)] bg-black/0 bg-blend-multiply bg-center bg-cover flex justify-center items-center"
+  ></section>
 
   <section class="container mx-auto p-4 py-[50px]">
+    <div
+      v-html="locale === 'en' ? zycoda_about_eng : zycoda_about_th"
+      class="text-black text-center mb-[15px] md:ml-[50%] ml-0 md:-translate-x-[50%] -translate-x-0"
+    ></div>
     <h1 class="text-[45px] text-black font-bold text-center">
       “EVERYONE CAN BUILD AI”
     </h1>
@@ -107,7 +99,12 @@
       </div>
     </div>
 
-    <div class="container mx-auto p-4">
+    <div class="container mx-auto p-4 relative">
+      <p
+        class="absolute left-[50%] -translate-x-[50%] font-bold capitalize mt-[35px] text-[20px] text-black"
+      >
+        "{{ $t("team") }}"
+      </p>
       <img src="/images/AboutUs2.png" class="w-full" alt="" />
     </div>
   </section>
