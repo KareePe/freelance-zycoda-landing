@@ -12,7 +12,9 @@
         {{ $t("ask_2") }}
       </p>
 
-      <div class="md:max-w-[550px] w-full md:ml-[50%] ml-0 md:-translate-x-[50%] -translate-x-0">
+      <div
+        class="md:max-w-[550px] w-full md:ml-[50%] ml-0 md:-translate-x-[50%] -translate-x-0"
+      >
         <Vueform
           v-model="data"
           ref="form$"
@@ -96,73 +98,9 @@
           </GroupElement>
 
           <ButtonElement name="button" submits :loading="loading">
-            {{ $t('register') }}
+            {{ $t("register") }}
           </ButtonElement>
         </Vueform>
-
-        <p class="font-bold text-black mt-[25px]">
-          Any problems, Please contact
-        </p>
-
-        <ul class="mt-[15px] p-0 flex md:flex-nowrap flex-wrap gap-[10px]">
-          <li class="flex md:flex-nowrap flex-wrap gap-4 justify-start items-center mb-2">
-            <div
-              class="min-w-[45px] h-[45px] rounded-full bg-black flex justify-center items-center"
-            >
-              <vue-feather
-                type="phone-call"
-                class="text-[#fff] w-[16px]"
-              ></vue-feather>
-            </div>
-
-            <div>
-              <a href="tel:0625910082" class="underline text-[16px] text-black"
-                >062-5910-082</a
-              >
-              ,
-              <a href="tel:0836535442" class="underline text-[16px] text-black"
-                >083-6535-442</a
-              >
-            </div>
-          </li>
-          <li class="flex flex-nowrap gap-4 justify-start items-center mb-2">
-            <div
-              class="min-w-[45px] h-[45px] rounded-full bg-black flex justify-center items-center"
-            >
-              <vue-feather
-                type="mail"
-                class="text-[#fff] w-[16px]"
-              ></vue-feather>
-            </div>
-
-            <div>
-              <a
-                href="mailto:admin@zycoda.com"
-                class="underline text-[16px] text-black"
-                >admin@zycoda.com</a
-              >
-            </div>
-          </li>
-          <li class="flex flex-nowrap gap-4 justify-start items-center mb-2">
-            <div
-              class="w-[45px] h-[45px] rounded-full bg-blue flex justify-center items-center"
-            >
-              <vue-feather
-                type="facebook"
-                class="text-[#fff] w-[16px]"
-              ></vue-feather>
-            </div>
-
-            <div>
-              <a
-                href="https://www.facebook.com/zycoda.saas"
-                target="_blank"
-                class="underline text-[16px] text-black"
-                >Zycoda</a
-              >
-            </div>
-          </li>
-        </ul>
       </div>
     </div>
   </section>
@@ -172,7 +110,10 @@
       class="w-full md:px-[150px] px-[25px] h-[650px] bg-[url(/images/bg-footer.jpg)] bg-cover bg-left-bottom flex justify-center items-center"
     >
       <div>
-        <div v-html="$t('done')" class="font-bold text-[35px] text-center"></div>
+        <div
+          v-html="$t('done')"
+          class="font-bold text-[35px] text-center"
+        ></div>
 
         <img
           src="/images/logo/dark/logo-dark.svg"
@@ -191,6 +132,13 @@
 import { ref, onMounted } from "vue";
 import VueFeather from "vue-feather";
 
+import mailchimp from "@mailchimp/mailchimp_marketing";
+
+mailchimp.setConfig({
+  apiKey: "a801073683187fb13910d8115a0daee1-us17",
+  server: "us17",
+});
+
 const form$ = ref(null);
 const data = ref([{}]);
 let loading = ref(false);
@@ -199,8 +147,14 @@ let done = ref(false);
 
 const interestedLoanItem = [
   { label: "Z-MPRO (CMMS Platform)", value: "Z-MPRO (CMMS Platform)" },
-  { label: "Z-CONNECT (Connectivity Platform)", value: "Z-CONNECT (Connectivity Platform)" },
-  { label: "Z-PAP (Predictive Analytics Platform)", value: "Z-PAP (Predictive Analytics Platform)" },
+  {
+    label: "Z-CONNECT (Connectivity Platform)",
+    value: "Z-CONNECT (Connectivity Platform)",
+  },
+  {
+    label: "Z-PAP (Predictive Analytics Platform)",
+    value: "Z-PAP (Predictive Analytics Platform)",
+  },
 ];
 
 // ! เช็คให้กดได้แค่ตัวเลข
@@ -226,6 +180,19 @@ const fn_putInterestCustomer = async () => {
     done.value = true;
   }, 2000);
 };
+
+const run = async () => {
+  try {
+    const response = await mailchimp.ping.get();
+    console.log(response);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+onMounted(() => {
+  run();
+});
 </script>
 
 <style>

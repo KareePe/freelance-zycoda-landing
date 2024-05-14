@@ -1,6 +1,6 @@
 <template>
   <SlideBanner />
-  
+
   <section class="product w-full pt-[25px] bg-white-light">
     <div class="container mx-auto p-4">
       <h2 class="sm:text-[55px] text-[35px] font-bold capitalize text-black">
@@ -17,25 +17,27 @@
             background-position: center;
           "
         >
-          <div
-            class="bg-gradient-to-t from-blue to-blue/20 w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
-          ></div>
-          <div
-            class="p-[20px] h-full relative z-[9] flex flex-col justify-between"
-          >
-            <h2 class="font-bold text-[25px] text-[#fff]">Z-MPRO</h2>
+          <NuxtLink to="/products">
+            <div
+              class="bg-gradient-to-t from-blue to-blue/20 w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
+            ></div>
+            <div
+              class="p-[20px] h-full relative z-[9] flex flex-col justify-between"
+            >
+              <h2 class="font-bold text-[25px] text-[#fff]">Z-MPRO</h2>
 
-            <div>
-              <h3 class="font-bold text-[#fff] text-[20px]">CMMS Platform</h3>
-              <p class="text-[#fff] mb-[15px]">{{$t("Z-MPRO")}}</p>
+              <div>
+                <h3 class="font-bold text-[#fff] text-[20px]">CMMS Platform</h3>
+                <p class="text-[#fff] mb-[15px]">{{ $t("Z-MPRO") }}</p>
 
-              <NuxtLink
-                to="/contact-us"
-                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 px-8 py-2 rounded-full shadow-lg mt-[15px]"
-                >free trial</NuxtLink
-              >
+                <NuxtLink
+                  to="/contact-us"
+                  class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 px-8 py-2 rounded-full shadow-lg mt-[15px]"
+                  >free trial</NuxtLink
+                >
+              </div>
             </div>
-          </div>
+          </NuxtLink>
         </div>
         <div
           class="grow basis-[350px] h-[400px] relative rounded-lg shadow-lg"
@@ -45,27 +47,29 @@
             background-position: center;
           "
         >
-          <div
-            class="bg-gradient-to-t from-blue to-black/50 w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
-          ></div>
-          <div
-            class="p-[20px] h-full relative z-[9] flex flex-col justify-between"
-          >
-            <h2 class="font-bold text-[25px] text-[#fff]">Z-CONNECT</h2>
+          <NuxtLink to="/products">
+            <div
+              class="bg-gradient-to-t from-blue to-black/50 w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
+            ></div>
+            <div
+              class="p-[20px] h-full relative z-[9] flex flex-col justify-between"
+            >
+              <h2 class="font-bold text-[25px] text-[#fff]">Z-CONNECT</h2>
 
-            <div>
-              <h3 class="font-bold text-[#fff] text-[20px]">
-                Connectivity Platform
-              </h3>
-              <p class="text-[#fff] mb-[15px]">{{$t("Z-CONNECT")}}</p>
+              <div>
+                <h3 class="font-bold text-[#fff] text-[20px]">
+                  Connectivity Platform
+                </h3>
+                <p class="text-[#fff] mb-[15px]">{{ $t("Z-CONNECT") }}</p>
 
-              <NuxtLink
-                to="/contact-us"
-                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 px-8 py-2 rounded-full shadow-lg mt-[15px]"
-                >free trial</NuxtLink
-              >
+                <NuxtLink
+                  to="/contact-us"
+                  class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 px-8 py-2 rounded-full shadow-lg mt-[15px]"
+                  >free trial</NuxtLink
+                >
+              </div>
             </div>
-          </div>
+          </NuxtLink>
         </div>
         <div
           class="grow basis-[350px] h-[400px] relative rounded-lg shadow-lg"
@@ -75,27 +79,29 @@
             background-position: center;
           "
         >
-          <div
-            class="bg-gradient-to-t from-blue to-black/50 w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
-          ></div>
-          <div
-            class="p-[20px] h-full relative z-[9] flex flex-col justify-between"
-          >
-            <h2 class="font-bold text-[25px] text-[#fff]">Z-PAP</h2>
+          <NuxtLink to="/products">
+            <div
+              class="bg-gradient-to-t from-blue to-black/50 w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
+            ></div>
+            <div
+              class="p-[20px] h-full relative z-[9] flex flex-col justify-between"
+            >
+              <h2 class="font-bold text-[25px] text-[#fff]">Z-PAP</h2>
 
-            <div>
-              <h3 class="font-bold text-[#fff] text-[20px]">
-                Predictive Analytics Platform
-              </h3>
-              <p class="text-[#fff] mb-[15px]">{{$t("Z-PAP")}}</p>
+              <div>
+                <h3 class="font-bold text-[#fff] text-[20px]">
+                  Predictive Analytics Platform
+                </h3>
+                <p class="text-[#fff] mb-[15px]">{{ $t("Z-PAP") }}</p>
 
-              <NuxtLink
-                to="/contact-us"
-                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 px-8 py-2 rounded-full shadow-lg mt-[15px]"
-                >free trial</NuxtLink
-              >
+                <NuxtLink
+                  to="/contact-us"
+                  class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 px-8 py-2 rounded-full shadow-lg mt-[15px]"
+                  >free trial</NuxtLink
+                >
+              </div>
             </div>
-          </div>
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -319,175 +325,55 @@
       <p>{{ $t("description_blog_index") }}</p>
 
       <div class="my-[50px] flex flex-wrap -px-[15]">
-        <div class="md:basis-8/12 basis-full relative px-2">
-          <div
-            class="rounded-lg shadow-lg h-[400px] relative"
-            style="
-              background: url(/images/cloud-system.png);
+        <div
+          :class="`${
+            blog.blogId === 1
+              ? 'md:basis-8/12'
+              : blog.blogId === 6
+              ? 'md:basis-6/12'
+              : blog.blogId === 7
+              ? 'md:basis-6/12'
+              : 'md:basis-4/12'
+          } basis-full relative px-2 mb-[25px]`"
+          v-for="blog in blogData"
+          :key="blog.blogId"
+        >
+          <NuxtLink :to="blog.blogLink" target="_blank">
+            <div
+              class="rounded-lg shadow-lg h-[400px] relative group"
+              :style="`
+              background: url(/images/blog/${blog.blogCover});
               background-size: cover;
               background-position: center;
-            "
-          >
-            <div
-              class="bg-gradient-to-t from-blue to-transparent w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
-            ></div>
-            <div
-              class="h-[fit-content] w-full absolute bottom-0 p-4 z-[9] flex justify-between items-center bg-[#2A282F]/50 backdrop-blur-lg rounded-b-lg"
+            `"
             >
-              <div class="max-w-[75%]">
-                <h3 class="font-bold text-[#fff] text-[20px] line-clamp-2">
-                  Hackathon & Pitching E-SARN Thailand PMU-B Coding & AI Academy
-                </h3>
-              </div>
-
-              <NuxtLink
-                to="/contact-us"
-                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
+              <div
+                class="bg-gradient-to-t from-blue to-transparent w-full h-full absolute left-0 top-0 z-[1] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div
+                class="h-[fit-content] w-full absolute bottom-0 p-4 z-[9] flex justify-between items-center bg-[#2A282F]/50 backdrop-blur-lg rounded-b-lg"
               >
-                <vue-feather
-                  type="chevron-right"
-                  class="ml-[50%] mt-[50%] -translate-x-[50%] -translate-y-[50%]"
-                ></vue-feather>
-              </NuxtLink>
+                <div class="max-w-[75%]">
+                  <h3 class="font-bold text-[#fff] text-[20px] line-clamp-2">
+                    {{ blog.blogName }}
+                  </h3>
+                </div>
+
+                <NuxtLink
+                  :to="blog.blogLink"
+                  target="_blank"
+                  class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
+                >
+                  <vue-feather
+                    type="chevron-right"
+                    class="ml-[50%] mt-[50%] -translate-x-[50%] -translate-y-[50%]"
+                  ></vue-feather>
+                </NuxtLink>
+              </div>
             </div>
-          </div>
+          </NuxtLink>
         </div>
 
-        <div class="md:basis-4/12 basis-full relative px-2">
-          <div
-            class="rounded-lg shadow-lg h-[400px] relative"
-            style="
-              background: url(/images/engineer-technician-working-with-robot-arm-factory-industry-engineering-concept.jpeg);
-              background-size: cover;
-              background-position: center;
-            "
-          >
-            <div
-              class="bg-gradient-to-t from-blue to-transparent w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
-            ></div>
-            <div
-              class="h-[fit-content] w-full absolute bottom-0 p-4 z-[9] flex justify-between items-center bg-[#2A282F]/50 backdrop-blur-lg rounded-b-lg"
-            >
-              <div class="max-w-[75%]">
-                <h3 class="font-bold text-[#fff] text-[20px] line-clamp-2">
-                  Hackathon & Pitching E-SARN Thailand PMU-B Coding & AI Academy
-                </h3>
-              </div>
-
-              <NuxtLink
-                to="/contact-us"
-                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
-              >
-                <vue-feather
-                  type="chevron-right"
-                  class="ml-[50%] mt-[50%] -translate-x-[50%] -translate-y-[50%]"
-                ></vue-feather>
-              </NuxtLink>
-            </div>
-          </div>
-        </div>
-
-        <div class="md:basis-4/12 basis-full relative px-2 py-4">
-          <div
-            class="rounded-lg shadow-lg h-[400px] relative"
-            style="
-              background: url(/images/representation-user-experience-interface-design.png);
-              background-size: cover;
-              background-position: center;
-            "
-          >
-            <div
-              class="bg-gradient-to-t from-blue to-transparent w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
-            ></div>
-            <div
-              class="h-[fit-content] w-full absolute bottom-0 p-4 z-[9] flex justify-between items-center bg-[#2A282F]/50 backdrop-blur-lg rounded-b-lg"
-            >
-              <div class="max-w-[75%]">
-                <h3 class="font-bold text-[#fff] text-[20px] line-clamp-2">
-                  Hackathon & Pitching E-SARN Thailand PMU-B Coding & AI Academy
-                </h3>
-              </div>
-
-              <NuxtLink
-                to="/contact-us"
-                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
-              >
-                <vue-feather
-                  type="chevron-right"
-                  class="ml-[50%] mt-[50%] -translate-x-[50%] -translate-y-[50%]"
-                ></vue-feather>
-              </NuxtLink>
-            </div>
-          </div>
-        </div>
-
-        <div class="md:basis-4/12 basis-full relative px-2 py-4">
-          <div
-            class="rounded-lg shadow-lg h-[400px] relative"
-            style="
-              background: url(/images/stylish.jpg);
-              background-size: cover;
-              background-position: center;
-            "
-          >
-            <div
-              class="bg-gradient-to-t from-blue to-transparent w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
-            ></div>
-            <div
-              class="h-[fit-content] w-full absolute bottom-0 p-4 z-[9] flex justify-between items-center bg-[#2A282F]/50 backdrop-blur-lg rounded-b-lg"
-            >
-              <div class="max-w-[75%]">
-                <h3 class="font-bold text-[#fff] text-[20px] line-clamp-2">
-                  Hackathon & Pitching E-SARN Thailand PMU-B Coding & AI Academy
-                </h3>
-              </div>
-
-              <NuxtLink
-                to="/contact-us"
-                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
-              >
-                <vue-feather
-                  type="chevron-right"
-                  class="ml-[50%] mt-[50%] -translate-x-[50%] -translate-y-[50%]"
-                ></vue-feather>
-              </NuxtLink>
-            </div>
-          </div>
-        </div>
-
-        <div class="md:basis-4/12 basis-full relative px-2 py-4">
-          <div
-            class="rounded-lg shadow-lg h-[400px] relative"
-            style="
-              background: url(/images/business-analytics.png);
-              background-size: cover;
-              background-position: center;
-            "
-          >
-            <div
-              class="bg-gradient-to-t from-blue to-transparent w-full h-full absolute left-0 top-0 z-[1] rounded-lg"
-            ></div>
-            <div
-              class="h-[fit-content] w-full absolute bottom-0 p-4 z-[9] flex justify-between items-center bg-[#2A282F]/50 backdrop-blur-lg rounded-b-lg"
-            >
-              <div class="max-w-[75%]">
-                <h3 class="font-bold text-[#fff] text-[20px] line-clamp-2">
-                  Hackathon & Pitching E-SARN Thailand PMU-B Coding & AI Academy
-                </h3>
-              </div>
-
-              <NuxtLink
-                to="/contact-us"
-                class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
-              >
-                <vue-feather
-                  type="chevron-right"
-                  class="ml-[50%] mt-[50%] -translate-x-[50%] -translate-y-[50%]"
-                ></vue-feather>
-              </NuxtLink>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -497,7 +383,7 @@
       <h2
         class="sm:text-[55px] text-center text-[35px] font-bold capitalize text-black"
       >
-      {{$t('pastactivity')}}
+        {{ $t("pastactivity") }}
       </h2>
 
       <!-- <div class="boxes-con">
@@ -1002,6 +888,60 @@ const onSwiper = (swiper) => {
 const onSlideChange = () => {};
 
 const modules = [Navigation, Pagination, Autoplay, EffectFade];
+
+const blogData = [
+  {
+    blogId: 1,
+    blogName: "Smart KPI สร้าง KPI ที่ดีกว่าด้วย AI",
+    blogCover: "blog-1.jpeg",
+    blogLink:
+      "https://www.facebook.com/zycoda.saas/posts/pfbid04LYoBaZDFtXCbBJ7AVFbSsJuWvFn9P5FFu4Msd5Rd3RKRaF9n8zpRYoskSd2tzF6l",
+  },
+  {
+    blogId: 2,
+    blogName:
+      "บริษัทต่าง ๆ สามารถประสบความสำเร็จด้วย AI Smart Manufacturing ได้อย่างไร?",
+    blogCover: "blog-2.jpeg",
+    blogLink:
+      "https://www.facebook.com/zycoda.saas/posts/pfbid02GPGtLG6DNnZxvUhiydRWpyQqoKFZ2zwtpdgdSJqQNjDDUPY3qHAp8kG5XF5BCWigl",
+  },
+  {
+    blogId: 3,
+    blogName: "พลังของ Predictive Quality ที่จะกำหนดอนาคตธุรกิจของคุณ",
+    blogCover: "blog-3.jpeg",
+    blogLink:
+      "https://www.facebook.com/zycoda.saas/posts/pfbid02B6WA2y3HamsChxweChX6BpYz3D5aKhaNrFTefmWSMHvTkCWfeURc6RmaiGtj8xVyl",
+  },
+  {
+    blogId: 4,
+    blogName: "AI สามารถ Transform ความปลอดภัยในอุตสาหกรรมได้อย่างไร",
+    blogCover: "blog-4.jpeg",
+    blogLink:
+      "https://www.facebook.com/zycoda.saas/posts/pfbid02yRqUi1oXyXdk7K6T6B4SPUq1oJUcPbrYJtK1cdXrc8GpkLEWtmpzVtY3DgANFaEVl",
+  },
+  {
+    blogId: 5,
+    blogName: "5 Talent Factors ที่สำคัญที่สุดของการทำ Digital Transformation",
+    blogCover: "blog-5.jpeg",
+    blogLink:
+      "https://www.facebook.com/zycoda.saas/posts/pfbid02aTFiHptSAkmPHEqx4Rqd5brySqF1Q3n2sW8u9oZsWk1uWGiedWXrAwHQop1RBEEvl",
+  },
+  {
+    blogId: 6,
+    blogName: "Unplanned Downtime มีต้นทุนมากกว่าที่คุณคิด",
+    blogCover: "blog-6.jpeg",
+    blogLink:
+      "https://www.facebook.com/zycoda.saas/posts/pfbid02kgGLvK6fDby2jsdHcCKBGt97fw6yjYVY7frV1XwPifGEWKQdfTcFVmGq5F9j93rRl",
+  },
+  {
+    blogId: 7,
+    blogName:
+      "ตัวอย่าง Use Case จริงของลูกค้า จาก Z-PAP: AI Predictive maintenance Platform ของ ZYCODA",
+    blogCover: "blog-7.jpeg",
+    blogLink:
+      "https://www.facebook.com/zycoda.saas/posts/pfbid0tLkZqdQexEmh8jXojp74ixGbmR7MmMgCBwJVuS5t3cUfStwYiwtip9xW1BK3Uk4zl",
+  },
+];
 
 useSeoMeta({
   title: "ZYCODA",

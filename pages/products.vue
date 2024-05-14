@@ -6,7 +6,7 @@
 
     <img
       src="/images/jump_en.png"
-      class="absolute left-[50px] mt-[20px] arrow md:block hidden"
+      class="absolute left-[50px] mt-[20px] arrow hidden"
       alt=""
     />
     <!-- <div
@@ -14,8 +14,7 @@
     ></div> -->
     <div class="container mx-auto p-4">
       <section class="flex flex-nowrap">
-        <div class="max-w-[10%] w-full h-full relative md:block hidden"></div>
-        <div class="md:max-w-[90%] max-w-full w-full">
+        <div class="w-full">
           <p class="text-black text-[14px] font-bold">
             Begin your digital transformation
           </p>
