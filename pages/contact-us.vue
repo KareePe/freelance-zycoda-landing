@@ -131,13 +131,9 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import VueFeather from "vue-feather";
+import axios from "axios";
 
-import mailchimp from "@mailchimp/mailchimp_marketing";
-
-mailchimp.setConfig({
-  apiKey: "a801073683187fb13910d8115a0daee1-us17",
-  server: "us17",
-});
+const env = useRuntimeConfig();
 
 const form$ = ref(null);
 const data = ref([{}]);
@@ -175,24 +171,20 @@ const fn_checkPasteNum = (_event) => {
 
 const fn_putInterestCustomer = async () => {
   loading.value = true;
-  setTimeout(() => {
-    console.log(form$.value.data);
+
+  const { data } = await useFetch("/api/contact", {
+    method: "POST",
+    body: {
+      data: form$.value.data,
+    },
+  });
+
+  if (data.value.status === "OK") {
+    console.log(data.value);
     done.value = true;
-  }, 2000);
-};
-
-const run = async () => {
-  try {
-    const response = await mailchimp.ping.get();
-    console.log(response);
-  } catch (err) {
-    console.log(err);
   }
+  loading.value = false;
 };
-
-onMounted(() => {
-  run();
-});
 </script>
 
 <style>
