@@ -216,6 +216,17 @@ const fn_putInterestCustomer = async () => {
 const resetForm = () => {
   location.reload();
 };
+
+useSeoMeta({
+  title: "ZYCODA | EVERYONE CAN BUILD AI",
+  ogTitle: "ZYCODA | EVERYONE CAN BUILD AI",
+  description:
+    "AI solution สำหรับการบริหารจัดการงานซ่อมบำรุงที่ช่วยเพิ่มประสิทธิภาพการใช้งานของเครื่องจักรและช่วยลดต้นทุนในกระบวนการผลิต",
+  ogDescription:
+    "AI solution สำหรับการบริหารจัดการงานซ่อมบำรุงที่ช่วยเพิ่มประสิทธิภาพการใช้งานของเครื่องจักรและช่วยลดต้นทุนในกระบวนการผลิต",
+  ogImage: "/images/AboutUs1_Team.jpg",
+  twitterCard: "summary_large_image",
+});
 </script>
 
 <style>
