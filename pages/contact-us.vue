@@ -101,6 +101,18 @@
             {{ $t("register") }}
           </ButtonElement>
         </Vueform>
+
+        <p
+          class="text-pink font-bold text-[14px] my-[10px]"
+          v-if="wrong === true"
+        >
+          {{ $t("error_1") }}
+          <span
+            class="underline text-blue cursor-pointer"
+            @click="resetForm()"
+            >{{ $t("error_2") }}</span
+          >
+        </p>
       </div>
     </div>
   </section>
@@ -123,6 +135,14 @@
         <p class="font-bold text-[25px] text-center mt-4">
           “everyone can build AI”
         </p>
+
+        <button
+          @click="resetForm()"
+          type="button"
+          class="bg-pink hover:bg-blue transition-all duration-300 mt-8 ml-[50%] -translate-x-[50%] rounded-lg shadow-lg text-[#fff] w-[150px] h-[40px] flex justify-center items-center"
+        >
+          {{ $t("ok") }}
+        </button>
       </div>
     </div>
   </section>
@@ -140,6 +160,7 @@ const data = ref([{}]);
 let loading = ref(false);
 
 let done = ref(false);
+let wrong = ref(false);
 
 const interestedLoanItem = [
   { label: "Z-MPRO (CMMS Platform)", value: "Z-MPRO (CMMS Platform)" },
@@ -171,19 +192,29 @@ const fn_checkPasteNum = (_event) => {
 
 const fn_putInterestCustomer = async () => {
   loading.value = true;
+  try {
+    const { data } = await useFetch("/api/contact", {
+      method: "POST",
+      body: {
+        data: form$.value.data,
+      },
+    });
 
-  const { data } = await useFetch("/api/contact", {
-    method: "POST",
-    body: {
-      data: form$.value.data,
-    },
-  });
+    if (data.value.status === "OK") {
+      console.log(data.value);
+      done.value = true;
+    }
 
-  if (data.value.status === "OK") {
-    console.log(data.value);
-    done.value = true;
+    loading.value = false;
+  } catch (err) {
+    console.log(err);
+    loading.value = false;
+    wrong.value = true;
   }
-  loading.value = false;
+};
+
+const resetForm = () => {
+  location.reload();
 };
 </script>
 
