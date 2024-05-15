@@ -193,17 +193,25 @@ const fn_checkPasteNum = (_event) => {
 const fn_putInterestCustomer = async () => {
   loading.value = true;
   try {
-    const { data } = await useFetch("/api/contact", {
-      method: "POST",
-      body: {
-        data: form$.value.data,
-      },
-    });
+    let payload = {
+      interested_credit: form$.value.data.interested_credit,
+      name: form$.value.data.name,
+      mail: form$.value.data.mail,
+      zipcode: form$.value.data.zipcode,
+      company_name: form$.value.data.company_name,
+    };
 
-    if (data.value.status === "OK") {
-      console.log(data.value);
-      done.value = true;
-    }
+    await axios
+      .post("https://node-sendmail-mu.vercel.app/sendemail", payload)
+      .then((res) => {
+        console.log(res.data);
+        done.value = true;
+      })
+      .catch((err) => {
+        console.log(err);
+        loading.value = false;
+        wrong.value = true;
+      });
 
     loading.value = false;
   } catch (err) {
