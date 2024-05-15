@@ -32,8 +32,11 @@
   "label_phone": "Phone Number *",
   "label_company": "Company Name *",
   "done": "Your information well-received!<br>We will definitely recontact you as soon as possible.",
-  "register":"Register",
-  "pastactivity":"Past-Activities",
-  "getpro":"Get professional suggestions",
-  "team":"Professional Support Team"
+  "register": "Register",
+  "pastactivity": "Past-Activities",
+  "getpro": "Get professional suggestions",
+  "team": "Professional Support Team",
+  "ok": "Done",
+  "error_1": "Something go wrong? Please try again.",
+  "error_2": "Click!"
 }
