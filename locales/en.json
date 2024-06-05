@@ -3,6 +3,7 @@
   "menu_about": "about us",
   "menu_products": "products",
   "menu_contact": "contact us",
+  "menu_blog":"blog",
   "search": "search",
   "Z-MPRO": "The comprehensive maintenance system, including PM planning, can easily connect with an ERP system. Moreover, it supports another module called z-PAP for AI predictive maintenance in the future.",
   "Z-CONNECT": "The system connects data for AI predictive maintenance. We provides sensor installation, PLC & SCADA connection, and database connection on either cloud or customer-existing customers.",
@@ -38,5 +39,7 @@
   "team": "Professional Support Team",
   "ok": "Done",
   "error_1": "Something go wrong? Please try again.",
-  "error_2": "Click!"
+  "error_2": "Click!",
+  "blog_more":"Read more",
+  "load":"Load more"
 }

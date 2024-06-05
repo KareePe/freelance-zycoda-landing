@@ -319,30 +319,43 @@
 
   <section class="blog bg-white-light py-[100px]">
     <div class="container mx-auto p-4">
-      <h2 class="sm:text-[55px] text-[35px] font-bold capitalize text-black">
-        {{ $t("blog") }}
-      </h2>
-      <p>{{ $t("description_blog_index") }}</p>
+      <div class="flex justify-between">
+        <div>
+          <h2
+            class="sm:text-[55px] text-[35px] font-bold capitalize text-black"
+          >
+            {{ $t("blog") }}
+          </h2>
+          <p>{{ $t("description_blog_index") }}</p>
+        </div>
+        <NuxtLink
+          to="/blog"
+          target="_blank"
+          class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[fit-content] h-[50px] flex items-center px-4 rounded-md shadow-xl"
+        >
+          {{ $t("blog_more") }}
+        </NuxtLink>
+      </div>
 
       <div class="my-[50px] flex flex-wrap -px-[15]">
         <div
           :class="`${
-            blog.blogId === 1
+            index === 0
               ? 'md:basis-8/12'
-              : blog.blogId === 6
+              : index === 6
               ? 'md:basis-6/12'
-              : blog.blogId === 7
+              : index === 7
               ? 'md:basis-6/12'
               : 'md:basis-4/12'
           } basis-full relative px-2 mb-[25px]`"
-          v-for="blog in blogData"
-          :key="blog.blogId"
+          v-for="(blog, index) in itemsBlog"
+          :key="index"
         >
           <NuxtLink :to="blog.blogLink" target="_blank">
             <div
               class="rounded-lg shadow-lg h-[400px] relative group"
               :style="`
-              background: url(/images/blog/${blog.blogCover});
+              background: url(https://raw.thearkcoding.com/uploads/${blog.articleImg});
               background-size: cover;
               background-position: center;
             `"
@@ -355,12 +368,12 @@
               >
                 <div class="max-w-[75%]">
                   <h3 class="font-bold text-[#fff] text-[20px] line-clamp-2">
-                    {{ blog.blogName }}
+                    {{ blog.articleTopic }}
                   </h3>
                 </div>
 
                 <NuxtLink
-                  :to="blog.blogLink"
+                  :to="`/blog/${blog.articleId}/${blog.articleTopic}`"
                   target="_blank"
                   class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
                 >
@@ -373,7 +386,6 @@
             </div>
           </NuxtLink>
         </div>
-
       </div>
     </div>
   </section>
@@ -852,10 +864,28 @@
       </lightgallery> -->
     </div>
   </section>
+
+  <p v-if="pending">loading...</p>
+
+  <ul v-else>
+    <li v-for="(item, index) in itemsBlog" :key="index">
+      <NuxtLink :to="`/blog/${item.articleId}/${item.articleTopic}`">
+        {{ item.articleId + "||" + item.articleTopic }}
+      </NuxtLink>
+    </li>
+  </ul>
+
+  <button
+    @click="fn_loadmore"
+    type="button"
+    v-if="blogs.itemcount - blogs.itemlast <= 1"
+  >
+    load
+  </button>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, watch } from "vue";
 import VueFeather from "vue-feather";
 
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
@@ -942,6 +972,53 @@ const blogData = [
       "https://www.facebook.com/zycoda.saas/posts/pfbid0tLkZqdQexEmh8jXojp74ixGbmR7MmMgCBwJVuS5t3cUfStwYiwtip9xW1BK3Uk4zl",
   },
 ];
+
+const itemsBlog = ref([]);
+const limit = ref(5);
+const offset = ref(0);
+const hasMore = ref(true);
+
+const { pending, data: blogs } = await useAsyncData(
+  "blogs",
+  () =>
+    $fetch("http://localhost:5500/blog", {
+      params: {
+        limit: limit.value,
+        offset: offset.value,
+      },
+    }),
+  { watch: [offset] }
+);
+
+// const {
+//   pending,
+//   data: blogs,
+//   refresh,
+// } = await useFetch(`http://localhost:5500/blog`, {
+//   method: "get",
+//   lazy: false,
+//   params: {
+//     limit: limit.value,
+//     offset: offset.value,
+//   },
+// });
+
+if (blogs.value.message.length > 0) {
+  itemsBlog.value.push(...blogs.value.message);
+}
+
+const fn_loadmore = async () => {
+  limit.value = 3;
+  offset.value = offset.value === 0 ? 6 : offset.value + 3;
+  console.log(limit.value);
+  console.log(offset.value);
+  // await refresh();
+};
+
+watch(blogs, async (newQuestion, oldQuestion) => {
+  itemsBlog.value.push(...blogs.value.message);
+  console.log(itemsBlog.value, "watch");
+});
 
 useSeoMeta({
   title: "ZYCODA",
