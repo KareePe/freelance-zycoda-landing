@@ -32,7 +32,7 @@ const {
   pending,
   data: blogs,
   refresh,
-} = await useFetch(`http://localhost:5500/blog/${route.params.id}`, {
+} = await useFetch(`https://node-zycoda-admin.vercel.app/blog/${route.params.id}`, {
   method: "get",
   lazy: false,
 });

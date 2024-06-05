@@ -22,7 +22,7 @@ export default defineNuxtConfig({
         {
           rel: "icon",
           type: "image/png",
-          href: "images/logo/symbol/square.png",
+          href: "/images/logo/symbol/square.png",
         },
       ],
     },

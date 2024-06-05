@@ -77,7 +77,7 @@ const hasMore = ref(true);
 const { pending, data: blogs } = await useAsyncData(
   "blogs",
   () =>
-    $fetch("http://localhost:5500/blog", {
+    $fetch("https://node-zycoda-admin.vercel.app/blog", {
       params: {
         limit: limit.value,
         offset: offset.value,
