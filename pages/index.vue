@@ -350,7 +350,7 @@
           v-for="(blog, index) in itemsBlog"
           :key="index"
         >
-          <NuxtLink :to="blog.blogLink">
+          <NuxtLink :to="`/blog/${blog.articleId}`">
             <div
               class="rounded-lg shadow-lg h-[400px] relative group"
               :style="`
@@ -372,7 +372,7 @@
                 </div>
 
                 <NuxtLink
-                  :to="`/blog/${blog.articleId}/${blog.articleTopic}`"
+                  :to="`/blog/${blog.articleId}`"
                   class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
                 >
                   <vue-feather
@@ -862,24 +862,6 @@
       </lightgallery> -->
     </div>
   </section>
-
-  <p v-if="pending">loading...</p>
-
-  <ul v-else>
-    <li v-for="(item, index) in itemsBlog" :key="index">
-      <NuxtLink :to="`/blog/${item.articleId}/${item.articleTopic}`">
-        {{ item.articleId + "||" + item.articleTopic }}
-      </NuxtLink>
-    </li>
-  </ul>
-
-  <button
-    @click="fn_loadmore"
-    type="button"
-    v-if="blogs.itemcount - blogs.itemlast <= 1"
-  >
-    load
-  </button>
 </template>
 
 <script setup>

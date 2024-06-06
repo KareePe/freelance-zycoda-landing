@@ -53,4 +53,9 @@ export default defineNuxtConfig({
       NUXT_API_MAIL: process.env.NUXT_API_MAIL,
     },
   },
+  nitro: {
+    prerender: {
+      failOnError: false,
+    },
+  },
 });

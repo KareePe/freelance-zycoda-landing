@@ -38,8 +38,8 @@ const {
 });
 
 useSeoMeta({
-  title: `${route.params.slug}`,
-  ogTitle: `${route.params.slug}`,
+  title: `${blogs.value[0].articleTopic}`,
+  ogTitle: `${blogs.value[0].articleTopic}`,
   description:
     "ZYCODA aims to advance Thailand industry by implementing AI through the mechanical maintenance management system",
   ogDescription:
