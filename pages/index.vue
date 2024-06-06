@@ -330,7 +330,6 @@
         </div>
         <NuxtLink
           to="/blog"
-          target="_blank"
           class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[fit-content] h-[50px] flex items-center px-4 rounded-md shadow-xl"
         >
           {{ $t("blog_more") }}
@@ -351,7 +350,7 @@
           v-for="(blog, index) in itemsBlog"
           :key="index"
         >
-          <NuxtLink :to="blog.blogLink" target="_blank">
+          <NuxtLink :to="blog.blogLink">
             <div
               class="rounded-lg shadow-lg h-[400px] relative group"
               :style="`
@@ -374,7 +373,6 @@
 
                 <NuxtLink
                   :to="`/blog/${blog.articleId}/${blog.articleTopic}`"
-                  target="_blank"
                   class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
                 >
                   <vue-feather

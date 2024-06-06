@@ -44,7 +44,7 @@ useSeoMeta({
     "ZYCODA aims to advance Thailand industry by implementing AI through the mechanical maintenance management system",
   ogDescription:
     "ZYCODA aims to advance Thailand industry by implementing AI through the mechanical maintenance management system",
-  ogImage: "/images/logo/dark/logo-dark.png",
+  ogImage: `https://raw.thearkcoding.com/uploads/${blogs.value[0].articleImg}`,
   twitterCard: "summary_large_image",
 });
 </script>
