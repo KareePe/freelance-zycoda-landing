@@ -1,10 +1,11 @@
 <template>
-  <div class="mt-[70px]">
+  <div v-if="pending"></div>
+  <div v-else class="mt-[70px]">
     <img
-        :src="`https://raw.thearkcoding.com/uploads/${blogs[0].articleImg}`"
-        class="lg:hidden block mb-[50px]"
-        alt=""
-      />
+      :src="`https://raw.thearkcoding.com/uploads/${blogs[0].articleImg}`"
+      class="lg:hidden block mb-[50px]"
+      alt=""
+    />
     <div class="container mx-auto p-4">
       <img
         :src="`https://raw.thearkcoding.com/uploads/${blogs[0].articleImg}`"
@@ -25,15 +26,22 @@
 <script setup>
 import moment from "moment";
 
+const env = useRuntimeConfig();
+
 const route = useRoute();
 const param = route;
+
+let payload = {
+  id: route.params.id,
+};
 
 const {
   pending,
   data: blogs,
   refresh,
-} = await useFetch(`https://node-zycoda-admin.vercel.app/blog/${route.params.id}`, {
-  method: "get",
+} = await useFetch(env.public.NUXT_API_NODE + `/getDetailBlog`, {
+  method: "post",
+  body: payload,
   lazy: false,
 });
 
@@ -50,7 +58,7 @@ useSeoMeta({
 </script>
 
 <style>
-.desc a{
-  @apply !text-blue
+.desc a {
+  @apply !text-blue;
 }
 </style>
