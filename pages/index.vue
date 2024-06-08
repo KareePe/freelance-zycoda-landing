@@ -319,30 +319,43 @@
 
   <section class="blog bg-white-light py-[100px]">
     <div class="container mx-auto p-4">
-      <h2 class="sm:text-[55px] text-[35px] font-bold capitalize text-black">
-        {{ $t("blog") }}
-      </h2>
-      <p>{{ $t("description_blog_index") }}</p>
+      <div class="flex justify-between">
+        <div>
+          <h2
+            class="sm:text-[55px] text-[35px] font-bold capitalize text-black"
+          >
+            {{ $t("blog") }}
+          </h2>
+          <p>{{ $t("description_blog_index") }}</p>
+        </div>
+        <NuxtLink
+          to="/blog"
+          class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 md:w-[fit-content] w-full h-[50px] flex items-center justify-center px-4 rounded-md shadow-xl"
+        >
+          {{ $t("blog_more") }}
+        </NuxtLink>
+      </div>
 
-      <div class="my-[50px] flex flex-wrap -px-[15]">
+      <p v-if="pending" class="h-[1000px]">loading...</p>
+      <div v-else class="my-[50px] flex flex-wrap -px-[15]">
         <div
           :class="`${
-            blog.blogId === 1
+            index === 0
               ? 'md:basis-8/12'
-              : blog.blogId === 6
+              : index === 6
               ? 'md:basis-6/12'
-              : blog.blogId === 7
+              : index === 7
               ? 'md:basis-6/12'
               : 'md:basis-4/12'
           } basis-full relative px-2 mb-[25px]`"
-          v-for="blog in blogData"
-          :key="blog.blogId"
+          v-for="(blog, index) in itemsBlog.slice(0, 5)"
+          :key="index"
         >
-          <NuxtLink :to="blog.blogLink" target="_blank">
+          <NuxtLink :to="`/blog/${blog.articleId}`">
             <div
               class="rounded-lg shadow-lg h-[400px] relative group"
               :style="`
-              background: url(/images/blog/${blog.blogCover});
+              background: url(https://raw.thearkcoding.com/uploads/${blog.articleImg});
               background-size: cover;
               background-position: center;
             `"
@@ -355,13 +368,12 @@
               >
                 <div class="max-w-[75%]">
                   <h3 class="font-bold text-[#fff] text-[20px] line-clamp-2">
-                    {{ blog.blogName }}
+                    {{ blog.articleTopic }}
                   </h3>
                 </div>
 
                 <NuxtLink
-                  :to="blog.blogLink"
-                  target="_blank"
+                  :to="`/blog/${blog.articleId}`"
                   class="text-[#fff] capitalize text-center bg-pink hover:bg-blue transition-colors duration-300 w-[50px] h-[50px] block rounded-md shadow-xl"
                 >
                   <vue-feather
@@ -373,7 +385,6 @@
             </div>
           </NuxtLink>
         </div>
-
       </div>
     </div>
   </section>
@@ -385,84 +396,6 @@
       >
         {{ $t("pastactivity") }}
       </h2>
-
-      <!-- <div class="boxes-con">
-        <div class="boxes">
-          <a href="#" class="block relative group">
-            <div class=" bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"></div>
-            <img
-              src="/images/activities/PastActivity_Automation2024_1.jpg"
-              alt=""
-            />
-            <p class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline">Automation2024</p>
-          </a>
-        </div>
-        <div class="boxes">
-          <a href="#" class="block relative group">
-            <div class=" bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"></div>
-            <img
-              src="/images/activities/PastActivity_Automation2024_2.jpg"
-              alt=""
-            />
-            <p class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline">Automation2024</p>
-          </a>
-        </div>
-        <div class="boxes">
-          <a href="#" class="block relative group">
-            <div class=" bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"></div>
-            <img
-              src="/images/activities/PastActivity_Automation2024_3.jpg"
-              alt=""
-            />
-            <p class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline">Automation2024</p>
-          </a>
-        </div>
-        <div class="boxes">
-          <div>4</div>
-        </div>
-        <div class="boxes">
-          <div>5</div>
-        </div>
-        <div class="boxes">
-          <div>6</div>
-        </div>
-        <div class="boxes">
-          <div>7</div>
-        </div>
-        <div class="boxes">
-          <div>8</div>
-        </div>
-        <div class="boxes">
-          <div>9</div>
-        </div>
-        <div class="boxes">
-          <div>10</div>
-        </div>
-        <div class="boxes">
-          <div>11</div>
-        </div>
-        <div class="boxes">
-          <div>12</div>
-        </div>
-        <div class="boxes">
-          <div>13</div>
-        </div>
-        <div class="boxes">
-          <div>14</div>
-        </div>
-        <div class="boxes">
-          <div>15</div>
-        </div>
-        <div class="boxes">
-          <div>16</div>
-        </div>
-        <div class="boxes">
-          <div>17</div>
-        </div>
-        <div class="boxes">
-          <div>18</div>
-        </div>
-      </div> -->
 
       <div class="lightgallery-vue mt-[50px]">
         <a
@@ -656,206 +589,12 @@
           </p>
         </a>
       </div>
-
-      <!-- <lightgallery
-        :settings="{
-          speed: 500,
-          plugins: plugins,
-          lastRow: false,
-          rowHeight: 180,
-          margins: 5,
-        }"
-        :onInit="onInit"
-        :onBeforeSlide="onBeforeSlide"
-        class="mt-[50px] hidden"
-      >
-        <a
-          href="/images/activities/PastActivity_Automation2024_1.jpg"
-          class="block relative group"
-        >
-          <div
-            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
-          ></div>
-          <img
-            alt="img1"
-            class="max-w-full block"
-            src="/images/activities/PastActivity_Automation2024_1.jpg"
-          />
-          <p
-            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
-          >
-            Automation2024
-          </p>
-        </a>
-        <a
-          href="/images/activities/PastActivity_SM2023_2.jpg"
-          class="block relative group"
-        >
-          <div
-            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
-          ></div>
-          <img
-            alt="img1"
-            class="max-w-full block"
-            src="/images/activities/PastActivity_SM2023_2.jpg"
-          />
-          <p
-            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
-          >
-            SM2023
-          </p>
-        </a>
-        <a
-          href="/images/activities/PastActivity_SM2023_1.jpg"
-          class="block relative group"
-        >
-          <div
-            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
-          ></div>
-          <img
-            alt="img1"
-            class="max-w-full block"
-            src="/images/activities/PastActivity_SM2023_1.jpg"
-          />
-          <p
-            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
-          >
-            SM2023
-          </p>
-        </a>
-        <a
-          href="/images/activities/PastActivity_Automation2024_3.jpg"
-          class="block relative group"
-        >
-          <div
-            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
-          ></div>
-          <img
-            alt="img1"
-            class="max-w-full block"
-            src="/images/activities/PastActivity_Automation2024_3.jpg"
-          />
-          <p
-            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
-          >
-            Automation2024
-          </p>
-        </a>
-        <a
-          href="/images/activities/PastActivity_YT2024_2.jpg"
-          class="block relative group"
-        >
-          <div
-            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
-          ></div>
-          <img
-            alt="img1"
-            class="max-w-full block"
-            src="/images/activities/PastActivity_YT2024_2.jpg"
-          />
-          <p
-            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
-          >
-            YT2024
-          </p>
-        </a>
-        <a
-          href="/images/activities/PastActivity_YT2024_1.jpg"
-          class="block relative group"
-        >
-          <div
-            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
-          ></div>
-          <img
-            alt="img1"
-            class="max-w-full block"
-            src="/images/activities/PastActivity_YT2024_1.jpg"
-          />
-          <p
-            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
-          >
-            YT2024
-          </p>
-        </a>
-        <a
-          href="/images/activities/PastActivity_Automation2024_2.jpg"
-          class="block relative group"
-        >
-          <div
-            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
-          ></div>
-          <img
-            alt="img1"
-            class="max-w-full block"
-            src="/images/activities/PastActivity_Automation2024_2.jpg"
-          />
-          <p
-            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
-          >
-            Automation2024
-          </p>
-        </a>
-        <a
-          href="/images/activities/PastActivity_Techsauce2023_1.jpg"
-          class="block relative group"
-        >
-          <div
-            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
-          ></div>
-          <img
-            alt="img1"
-            class="max-w-full block"
-            src="/images/activities/PastActivity_Techsauce2023_1.jpg"
-          />
-          <p
-            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
-          >
-            Techsauce2023
-          </p>
-        </a>
-        <a
-          href="/images/activities/PastActivity_Techsauce2023_2.jpg"
-          class="block relative group"
-        >
-          <div
-            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
-          ></div>
-          <img
-            alt="img1"
-            class="max-w-full block"
-            src="/images/activities/PastActivity_Techsauce2023_2.jpg"
-          />
-          <p
-            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
-          >
-            Techsauce2023
-          </p>
-        </a>
-        <a
-          href="/images/activities/PastActivity_Techsauce2023_3.jpg"
-          class="block relative group"
-        >
-          <div
-            class="bg-black/35 group-hover:bg-black/0 transition-all duration-300 absolute top-0 w-full h-full"
-          ></div>
-          <img
-            alt="img1"
-            class="max-w-full block"
-            src="/images/activities/PastActivity_Techsauce2023_3.jpg"
-          />
-          <p
-            class="text-[#fff] text-[18px] font-bold absolute bottom-4 left-4 group-hover:underline z-[9]"
-          >
-            Techsauce2023
-          </p>
-        </a>
-      </lightgallery> -->
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, watch } from "vue";
 import VueFeather from "vue-feather";
 
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
@@ -867,6 +606,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
+
+const env = useRuntimeConfig();
 
 import Lightgallery from "lightgallery/vue";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
@@ -942,6 +683,16 @@ const blogData = [
       "https://www.facebook.com/zycoda.saas/posts/pfbid0tLkZqdQexEmh8jXojp74ixGbmR7MmMgCBwJVuS5t3cUfStwYiwtip9xW1BK3Uk4zl",
   },
 ];
+
+const itemsBlog = ref([]);
+
+const { pending, data: blogs } = await useFetch(
+  env.public.NUXT_API_NODE + "/getBlog"
+);
+
+if (blogs.value.message.length > 0) {
+  itemsBlog.value.push(...blogs.value.message);
+}
 
 useSeoMeta({
   title: "ZYCODA",

@@ -1,25 +1,37 @@
 <template>
-  <div class="bg-[#fff] w-full fixed top-0 z-[9999] transition-all duration-300 top-nav">
+  <div
+    class="bg-[#fff] w-full fixed top-0 z-[9999] transition-all duration-300 top-nav"
+  >
     <div
       class="container mx-auto px-4 w-full h-[70px] flex justify-between items-center transition-all duration-300 inner-nav"
     >
       <NuxtLink :to="localPath('/')">
-        <img src="/images/logo/dark/logo-dark.svg" class="w-[150px] logo" alt=""
+        <img
+          src="/images/logo/dark/logo-dark.svg"
+          class="w-[150px] logo"
+          alt=""
       /></NuxtLink>
 
       <ul class="md:flex hidden gap-[25px]">
         <li>
-          <NuxtLink to="/" class="capitalize text-black">{{$t('menu_home')}}</NuxtLink>
+          <NuxtLink to="/" class="capitalize text-black">{{
+            $t("menu_home")
+          }}</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/about-us" class="capitalize text-black"
-            >{{$t('menu_about')}}</NuxtLink
-          >
+          <NuxtLink to="/about-us" class="capitalize text-black">{{
+            $t("menu_about")
+          }}</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/products" class="capitalize text-black"
-            >{{$t('menu_products')}}</NuxtLink
-          >
+          <NuxtLink to="/products" class="capitalize text-black">{{
+            $t("menu_products")
+          }}</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/blog" class="capitalize text-black">{{
+            $t("menu_blog")
+          }}</NuxtLink>
         </li>
       </ul>
 
@@ -55,7 +67,7 @@
         <NuxtLink
           to="/contact-us"
           class="capitalize block px-8 py-2 bg-[#BF2C7B] !text-white-light rounded-full shadow-lg"
-          >{{$t('menu_contact')}}</NuxtLink
+          >{{ $t("menu_contact") }}</NuxtLink
         >
       </div>
     </div>
@@ -88,6 +100,9 @@
         <NuxtLink to="/products" class="capitalize text-black"
           >products</NuxtLink
         >
+      </li>
+      <li>
+        <NuxtLink to="/blog" class="capitalize text-black">blog</NuxtLink>
       </li>
     </ul>
 
@@ -163,23 +178,23 @@ const fn_toggleDrawer = () => {
 };
 
 onMounted(() => {
-  window.addEventListener("scroll",() => {
+  window.addEventListener("scroll", () => {
     // console.log(window.scrollY)
-    const topNav = document.querySelector('.top-nav')
-    const innerNav = document.querySelector('.inner-nav')
-    const logo = document.querySelector('.logo')
-    if(window.scrollY >= 350) {
-      topNav.classList.add('backdrop-blur-md')
-      topNav.classList.add('!bg-[#fff]/60')
-      topNav.classList.add('!shadow-lg')
-      innerNav.classList.add('!h-[55px]')
-    }else if(window.scrollY <= 70){
-      topNav.classList.remove('backdrop-blur-md')
-      topNav.classList.remove('!bg-[#fff]/60')
-      topNav.classList.remove('!shadow-lg')
-      innerNav.classList.remove('!h-[55px]')
+    const topNav = document.querySelector(".top-nav");
+    const innerNav = document.querySelector(".inner-nav");
+    const logo = document.querySelector(".logo");
+    if (window.scrollY >= 350) {
+      topNav.classList.add("backdrop-blur-md");
+      topNav.classList.add("!bg-[#fff]/60");
+      topNav.classList.add("!shadow-lg");
+      innerNav.classList.add("!h-[55px]");
+    } else if (window.scrollY <= 70) {
+      topNav.classList.remove("backdrop-blur-md");
+      topNav.classList.remove("!bg-[#fff]/60");
+      topNav.classList.remove("!shadow-lg");
+      innerNav.classList.remove("!h-[55px]");
     }
-  })
+  });
 });
 </script>
 
