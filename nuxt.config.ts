@@ -52,6 +52,7 @@ export default defineNuxtConfig({
       NUXT_API_USER_PASSWORD: process.env.NUXT_API_USER_PASSWORD,
       NUXT_API_MAIL: process.env.NUXT_API_MAIL,
       NUXT_API_NODE: process.env.NUXT_API_NODE,
+      NUXT_API_DEV: process.env.NUXT_API_DEV,
     },
   },
   nitro: {
