@@ -87,7 +87,7 @@ let newLength = ref(0);
 const blogData = ref([]);
 
 const { pending, data: blogs } = await useFetch(
-  env.public.NUXT_API_DEV + "/getBlog"
+  env.public.NUXT_API_NODE + "/getBlog"
 );
 
 if (blogs.value.message.length > 0) {

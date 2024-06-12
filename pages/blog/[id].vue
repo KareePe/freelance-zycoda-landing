@@ -52,7 +52,7 @@ const fn_updateView = async () => {
     loading.value = true;
 
     const update = await axios.post(
-      env.public.NUXT_API_DEV + `/updateView`,
+      env.public.NUXT_API_NODE + `/updateView`,
       payload
     );
     console.log(update);
@@ -76,7 +76,7 @@ const {
   pending,
   data: blogs,
   refresh,
-} = await useFetch(env.public.NUXT_API_DEV + `/getDetailBlog`, {
+} = await useFetch(env.public.NUXT_API_NODE + `/getDetailBlog`, {
   method: "post",
   body: payload,
   lazy: false,

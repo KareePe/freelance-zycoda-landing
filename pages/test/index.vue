@@ -20,7 +20,7 @@ const env = useRuntimeConfig();
 
 const blog = async () => {
   try {
-    let call_api = await axios.get(env.public.NUXT_API_DEV + "/getBlog");
+    let call_api = await axios.get(env.public.NUXT_API_NODE + "/getBlog");
     blogData.value = call_api.data.message;
   } catch (err) {
     console.log(err);

@@ -25,7 +25,7 @@ let payload = {
 const blog = async () => {
   try {
     let call_api = await axios.post(
-      env.public.NUXT_API_DEV + "/getDetailBlog",
+      env.public.NUXT_API_NODE + "/getDetailBlog",
       payload
     );
 
@@ -36,7 +36,7 @@ const blog = async () => {
 };
 
 const { data: blogSeo } = await useFetch(
-  env.public.NUXT_API_DEV + "/getDetailBlog",
+  env.public.NUXT_API_NODE + "/getDetailBlog",
   {
     method: "post",
     body: payload,
