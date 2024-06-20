@@ -1,15 +1,15 @@
 <template>
   <div v-if="pending"></div>
-  <div v-else class="mt-[70px]">
+  <div v-else class="my-[100px]">
     <img
       :src="`https://raw.thearkcoding.com/uploads/${blogs[0].articleImg}`"
-      class="lg:hidden block"
+      class="lg:hidden block w-full"
       alt=""
     />
     <div class="container mx-auto p-4">
       <img
         :src="`https://raw.thearkcoding.com/uploads/${blogs[0].articleImg}`"
-        class="lg:block hidden rounded-[25px] shadow-lg"
+        class="lg:block hidden rounded-[25px] shadow-lg w-full"
         alt=""
       />
       <div class="flex items-center date my-4">
@@ -27,6 +27,13 @@
       <h1 class="text-[35px] font-bold">{{ blogs[0].articleTopic }}</h1>
 
       <div v-html="blogs[0].articleDesc" class="desc my-[50px]"></div>
+
+      <SocialShare
+        network="facebook"
+        :styled="true"
+        class="text-[#fff] w-[fit-content]"
+        ><template #label>Share with Facebook</template></SocialShare
+      >
     </div>
   </div>
 </template>
