@@ -12,6 +12,7 @@
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@nuxtjs/i18n": "^8.3.1",
+    "@stefanobartoletti/nuxt-social-share": "^0.7.0",
     "@vueform/nuxt": "^1.6.0",
     "axios": "^1.6.8",
     "lightgallery": "^2.7.2",

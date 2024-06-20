@@ -27,7 +27,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ["@nuxtjs/i18n", "@vueform/nuxt"],
+  modules: ["@nuxtjs/i18n", "@vueform/nuxt", "@stefanobartoletti/nuxt-social-share"],
   i18n: {
     strategy: "no_prefix",
     locales: [
@@ -60,4 +60,8 @@ export default defineNuxtConfig({
       failOnError: false,
     },
   },
+  socialShare: {
+		styled: true,
+		label: true,
+	}
 });
